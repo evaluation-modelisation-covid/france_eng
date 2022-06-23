@@ -1,0 +1,243 @@
+---
+title: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F, fig.align = "center",  dev='svg')
+library(plyr)
+library(lattice)
+library(lubridate)
+library(svglite)
+
+#loading relevant packages
+library(zoo) #for rollmean function
+library(tidyr)
+library(tidyverse) #mainly for reading files functions
+library(dplyr)
+library(ggplot2) #for ggplot graphs
+library(cowplot) #for plot_grid()
+library(stringr) #to manipulate strings
+
+theme_set(
+  theme_classic() +
+  theme(legend.position = "none", 
+        legend.title = element_blank(),
+        panel.grid.major.y = element_line(),
+        text = element_text(family = "Times New Roman"),
+        plot.title = element_text(face="bold"),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank())
+  )
+g_theme <- scale_color_manual(values=c('#ff0000','#D8D8D8'))
+myred <- '#ff0000'
+mygrey <- '#b4b4b4'
+#height and width of graphs
+w <- 4.5
+h <- 5.2
+```
+
+
+```{r loading true data, echo=FALSE, message=FALSE, warning=FALSE}
+data_gouv_new_hosp_rea <- read.csv(url("https://www.data.gouv.fr/fr/datasets/r/6fadff46-9efd-4c53-942a-54aca783c30c"), sep=";") %>%
+  mutate(date = as.Date(jour))
+data_gouv_beds_hosp_rea <- read.csv(url("https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7"), sep=";")  %>%
+  mutate(date = as.Date(jour))
+
+#Lits occupés en réanimation, hospitalisation et hospitalisation conventionnelle
+true_data_beds_hosp_rea <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>%
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#pour les echos pasteur 29 avril ile de france
+true_data_beds_hosp_rea_IDF <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep == 75 | dep == 92 | dep == 93 | dep == 94 | dep == 91 | dep == 95 | dep == 78 | dep == 77) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#Nouvelles admissions à l'hôpital et en réanimation (moyenné sur 7 jours)
+true_data_new_hosp_rea <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T), 
+            incid_rea = sum(incid_rea, na.rm = T)) %>%
+  mutate(new_rea_right = rollmean(incid_rea, 7, na.pad = T, align = "right"),#mean of 7 last days
+         new_hosp_right = rollmean(incid_hosp, 7, na.pad = T, align = "right"),
+         new_rea_center = rollmean(incid_rea, 7, na.pad = T, align = "center"),#centered mean
+         new_hosp_center = rollmean(incid_hosp, 7, na.pad = T, align = "center"))
+
+true_data_new_hosp_rea_no_mean <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+    dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(new_hosp = sum(incid_hosp, na.rm = T), 
+            new_rea = sum(incid_rea, na.rm = T))
+
+#Pour l'INSERM : admissions hebdomadaire à l'hôpital
+true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>% 
+  group_by(date) %>% #je n'ai pas filtré les outre-mer ici car pas précisé, mais ne change pas grand-chose
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T)) %>%
+  mutate(new_hosp_week = rollsum(incid_hosp, 7, na.pad = T, align = "left")) #patients arrivés dans les 7 derniers jours)
+
+```
+
+
+# Our approach
+
+This site aims to provide a retrospective on the main modeling scenarios used to guide the major decisions taken over the last two years (e.g. confinements, curfews, or the implementation of the health pass). A detailed description of the modeling scenarios is available on the [Home] page (https://evaluation-modelisation-covid.github.io/france/). An explanation of the importance of the evaluation of modeling scenarios is available on the page [Impact](impact.html).
+
+# Why is evaluating modeling scenarios important?
+
+Modeling scenarios have played a key role in public policy since the beginning of the covid-19 pandemic. Therefore, in order to make good decisions, it is important to have modeling scenarios that anticipate reality.
+
+For example, it is [modeling scenarios](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) that have led many governments to move beyond traditional epidemic control measures to strict containment. Indeed, [the WHO's 2019 pandemic preparedness report](https://www.who.int/publications/i/item/non-pharmaceutical-public-health-measuresfor-mitigating-the-risk-and-impact-of-epidemic-and-pandemic-influenza) did not recommend under any circumstances border closures, contact tracing or quarantine of contact cases during the pandemic phase (let alone widespread containment).
+
+Thus, in its [report of March 12, 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf), the Scientific Council stated that the traditional measures used to limit the spread of epidemics would not be sufficient to limit the circulation of the virus, implying the need for strict containment. epidemics would not be able to sufficiently limit the circulation of the virus, implying the need for strict containment ("it is not expected that the reduction in the size of the epidemic peak will be sufficient to avoid saturation of the health system. (...) This intuition was illustrated through the realization of a particular COVID19 model (Neil Ferguson, personal communication)."), based on the model whose results are presented below.
+
+
+```{r Sweden_Imperial_ICU_peak, echo=FALSE, out.width="500px"}
+knitr::include_graphics("images/Imperial_Sweden/Sweden_icu.svg")
+```
+
+The model scenarios are represented by the grey bars, representing 2 extremes: strict containment as followed by the other European countries, and no action. The approach followed by Sweden is intermediate, somewhere in between.
+
+We can see that the scenarios have largely overestimated the size of the hospital peak: even the optimistic scenario with strict confinement overestimates this peak by a factor of 2, even though Sweden has not confined its population.
+
+This example illustrates the importance that modeling scenarios can have, for example in deciding a government to implement strict containment.
+
+# Can we really evaluate them ?
+
+An argument often heard about modelling scenarios is the following: as the scenario allows to anticipate the worst, it leads to take measures that will prevent the modelled scenario from happening, which explains the discrepancy between the modelled scenario and the reality (where braking measures have been taken!). Indeed, it is not possible to establish a comparison in this case.
+
+<center>
+
+![](images/pas_de_comparaison.png){width="500px"}
+
+</center>
+
+However, modeling scenarios often incorporate several assumptions about the braking measures that might be put in place. Here, we will only compare reality **with scenarios where the braking measures implemented were also modeled**.
+
+<center>
+
+![](images/comparaison_explication.png){width="500px"}
+
+</center>
+
+Thus, the comparison between modeling scenarios and reality will allow us to assess whether they have correctly anticipated reality.
+
+For example, during the 4th wave, the Institut Pasteur first published a report on July 9. After the announcement of the extension of the health pass in mid-July, the Institut Pasteur published a new report integrating the effect of this measure. Comparing the modelling of the July 9 report with reality is not legitimate, but comparing the predictions of the following report with reality is (because the impact of the measures has already been modelled).
+
+## {.tabset .tabset-fade .tabset-pills}
+
+### ICU beds
+
+```{r 2021_07_26_Pasteur_ICU_beds}
+scenario <- read.csv("data/2021_07_26_Pasteur/beds_SC.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+scenario %>%
+  gather(key=pasteur, value = value, -date) %>%
+  ggplot(aes(date, value+200, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité", group="réalité"), size=1) +
+  annotate('text', x = as.Date("2021-08-30"), y = 1000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-08-25"), y = 9500, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(as.Date("2021-07-15"), as.Date("2021-10-10")) + g_theme +
+  labs(title = "Lits de soins critiques occupés",
+       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
+       https://evaluation-modelisation-covid.github.io/france/")
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png", 
+#        plot =g, width = w, height = h)
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.svg", 
+#        plot =g, width = w, height = h)
+```
+
+### ICU admissions
+
+```{r 2021_07_26_Pasteur_ICU_adm}
+#admissions en soins critiques
+scenario <- read.csv("data/2021_07_26_Pasteur/new_SC.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+scenario %>%
+  gather(key=pasteur, value = value, -date) %>%
+  ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
+  geom_line(data= true_data_new_hosp_rea, 
+            aes(x=date, y=new_rea_right, color = "réalité", group="réalité"), size=1) +
+  annotate('text', x = as.Date("2021-08-20"), y = 80, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-08-15"), y = 800, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
+  labs(title = "Admissions en soins critiques",
+       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
+       https://evaluation-modelisation-covid.github.io/france/")
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png", 
+#        plot =g, width = w, height = h)
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.svg", 
+#        plot =g, width = w, height = h)
+```
+
+### Hospital Admissions
+
+```{r 2021_07_26_Pasteur_hosp_adm}
+
+#Nouvelles admissions à l'hôpital
+scenario <- read.csv("data/2021_07_26_Pasteur/new_hospital.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+scenario %>%
+  gather(key=pasteur, value = value, -date) %>%
+  ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_smooth(se=F) +
+  geom_line(data= true_data_new_hosp_rea, 
+            aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
+  annotate('text', x = as.Date("2021-08-20"), y = 400, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-08-15"), y = 3200, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
+  labs(title = "Admission journalières à l'hôpital",
+       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
+       https://evaluation-modelisation-covid.github.io/france/")
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png", 
+#        plot =g, width = w, height = h) 
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.svg", 
+#        plot =g, width = w, height = h) 
+```
+
+##
+
+These scenarios compare the forecasts made for the month of August 2021 with the actual evolution during the months of August: as the scenarios incorporate the measures put in place, the comparison is possible.
+
+# Does it really matter if the models do not match reality?
+
+It may be thought that it is better to overestimate reality and "systematically plan for the worst", and thus lead politicians to respond with more measures to limit the spread of the epidemic. In reality, most measures to curb the epidemic (containment, curfews, school closures, public place closures) have negative health, social and economic impacts. Therefore, overreacting to the epidemic is not a good thing (nor is underreacting).
+
+<center>
+
+![](images/explication_simulation_enjeu.png){width="500px"}
+
+</center>
+
+Overly pessimistic modelling can thus lead to unnecessary restrictions being maintained. For example, when the [UK government decided to lift most of its restrictive measures](https://news.sky.com/story/covid-19-what-are-the-remaining-rules-in-england-after-freedom-day-12359221) (such as capacity limitations in public places, mandatory masking and travel restrictions) on 19 July 2021, without introducing a "health pass" for access to public events or places, [this initiative was decried by scientists as "dangerous and premature"](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext). This thesis of "dangerous and premature" openness was [supported by the British Scientific Advisory Board's (SAGE) modelling](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1001169/S1301_SPI-M-O_Summary_Roadmap_second_Step_4.2__1_.pdf), shown below.
+
+<center>
+
+![](images/sage_scenarios.png){width="500"}
+
+</center>
+
+These models were largely pessimistic, and thus overestimated the need to keep restrictive measures in place. Modelling that was not aligned with reality almost prevented a return to near-normal life for the British people.
+
+A more detailed description of the modeling scenarios is available on the [Modeling] page (https://evaluation-modelisation-covid.github.io/france/).
