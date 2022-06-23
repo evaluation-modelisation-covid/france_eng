@@ -1,8 +1,8 @@
-# Quel est l'impact des scénarios de modélisation?
+# What is the impact of modeling scenarios?
 
-Pourquoi se poser la question de l'évaluation des scénarios de modélisation? La prise de décision au cours de la pandémie de covid-19 est marquée par l'incertitude: incertitude sur l'évolution de l'épidémie, et incertitude sur l'impact des mesures prises en réaction. Les scénarios de modélisation sont utilisés pour informer les décideurs (conseil scientifique, conseil de défense sanitaire...). Par conséquent, pour pouvoir prendre de bonnes décisions, il est important d'avoir des scénarios de modélisation qui permettent de bien anticiper la réalité.
+Why ask about the evaluation of modeling scenarios? Decision-making during the covid-19 pandemic is marked by uncertainty: uncertainty about the evolution of the epidemic, and uncertainty about the impact of measures taken in response. Modeling scenarios are used to inform decision makers (scientific council, health defense council...). Therefore, in order to make good decisions, it is important to have modelling scenarios that anticipate reality.
 
-On peut penser qu'il vaut mieux surestimer la réalité, et donc mener les décideurs à réagir avec un surplus de mesures pour limiter la propagation de l'épidémie. En réalité, la plupart des mesures de freinage de l'épidémie (confinement, couvre-feu, fermeture de classes, fermetures de lieux publics) ont des impacts sanitaires, sociaux et économiques négatifs (voir le projet [CollateralGlobal](https://collateralglobal.org/) pour des exemples détaillés). Par conséquent, surréagir face à l'épidémie n'est pas une bonne chose (de même que ne pas réagir assez). Il ne faut donc pas "prévoir systématiquement le pire", mais prévoir au mieux afin que les décideurs puissent trouver le meilleur équilibre entre limitation de l'impact de l'épidémie et limitation de l'impact des mesures de freinage.
+It may be thought that it is better to overestimate reality, and thus lead decision makers to react with more measures to limit the spread of the epidemic. In reality, most measures to curb the epidemic (containment, curfews, school closures, public place closures) have negative health, social and economic impacts (see the [CollateralGlobal] project (https://collateralglobal.org/) for detailed examples). Therefore, overreacting to the epidemic is not a good thing (nor is underreacting). Therefore, one should not "systematically plan for the worst", but plan for the best so that decision-makers can find the best balance between limiting the impact of the epidemic and limiting the impact of curbing measures.
 
 <center>
 
@@ -10,4 +10,4 @@ On peut penser qu'il vaut mieux surestimer la réalité, et donc mener les déci
 
 </center>
 
-Dans un cas de figure où les scénarios sous-estimeraient l'évolution de l'épidémie (A), le risque serait que les décideurs sous-estiment l'évolution de l'épidémie et ne réagissent pas, ou pas assez. Inversement, si les scénarios surestiment l'évolution de l'épidémie (B), le risque est de surréagir et notamment de prendre trop de mesures aux effets délétères sans qu'elles soient justifiées.
+If the scenarios underestimate the evolution of the epidemic (A), the risk is that decision-makers underestimate the evolution of the epidemic and do not react, or do not react enough. Conversely, if the scenarios overestimate the evolution of the epidemic (B), there is a risk of overreacting and, in particular, of taking too many measures with deleterious effects without justification.

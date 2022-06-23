@@ -91,17 +91,17 @@ true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>%
 
 ```
 
-# Avant d'explorer les scénarios de modélisation
+# Before exploring the modeling scenarios
 
 <details>
 
 <summary>
 
-**Quel intérêt à étudier la fiabilité des scénarios de modélisations ?**
+**What is the point of studying modeling scenarios reliability ?**
 
 </summary>
 
-Dans un cas de figure où les scénarios de modélisation sous-estiment l'évolution de l'épidémie (A), le risque est de ne pas réagir, ou pas assez. Inversement, si les scénarios surestiment l'évolution de l'épidémie (B), le risque est de surréagir et notamment de prendre trop de mesures aux effets délétères sans qu'elles soient justifiées. En effet, la plupart des mesures de freinage de l'épidémie (confinement, couvre-feu, fermeture de classes, fermetures de lieux publics) ont des impacts sanitaires, sociaux et économiques négatifs. Par conséquent, surréagir face à l'épidémie n'est pas une bonne chose (de même que ne pas réagir assez).
+In the case where the modelling scenarios underestimate the evolution of the epidemic (A), the risk is not to react, or not enough. Conversely, if the scenarios overestimate the evolution of the epidemic (B), the risk is to overreact and in particular to take too many measures with deleterious effects without being justified. Indeed, most of the measures taken to curb the epidemic (containment, curfew, closure of classes, closure of public places) have negative health, social and economic impacts. Therefore, overreacting to the epidemic is not a good thing (nor is underreacting).
 
 <center>
 
@@ -109,7 +109,7 @@ Dans un cas de figure où les scénarios de modélisation sous-estiment l'évolu
 
 </center>
 
-Une explication plus détaillée est disponible sur la page [Impact](https://evaluation-modelisation-covid.github.io/france/impact).
+A more detailed explanation is available on the [Impact] page (impact.html).
 
 </details>
 
@@ -117,11 +117,11 @@ Une explication plus détaillée est disponible sur la page [Impact](https://eva
 
 <summary>
 
-**L'intérêt des modélisations n'est-il pas justement d'empêcher qu'elles se produisent ?**
+**Isn't the point of modeling to prevent them from happening ?**
 
 </summary>
 
-Un argument souvent entendu au sujet des scénarios de modélisation est le suivant : comme le scénario permet d'anticiper le pire, il mène à prendre des mesures qui vont justement empêcher que le scénario modélisé se produisent, ce qui expliquent le décalage entre le scénario de modélisation et la réalité (où des mesures de freinage ont été prises!). Effectivement, il n'est pas possible d'établir une comparaison dans ce cas de figure.
+An common argument about modelling scenarios is that since the scenario anticipates the worst, it leads to measures being taken that will prevent the modelled scenario from occurring, which explains the discrepancy between the modelled scenario and reality (where braking measures have been taken!). Indeed, it is not possible to establish a comparison in this case.
 
 <center>
 
@@ -129,7 +129,7 @@ Un argument souvent entendu au sujet des scénarios de modélisation est le suiv
 
 </center>
 
-Cependant, les scénarios de modélisation intègrent souvent plusieurs hypothèses sur les mesures de freinage qui pourraient être mises en place. Ici, nous ne comparerons la réalité qu'avec des scénarios où les mesures de freinage mises en place avaient aussi été modélisées.
+However, modeling scenarios often incorporate several assumptions about the braking measures that could be implemented. Here, we will only compare reality with scenarios where the braking measures implemented were also modeled.
 
 <center>
 
@@ -137,29 +137,29 @@ Cependant, les scénarios de modélisation intègrent souvent plusieurs hypothè
 
 </center>
 
-Ainsi, la comparaison entre scénarios de modélisation et réalité permettra bien d'évaluer si ceux-ci ont bien anticipé la réalité.
+Thus, the comparison between modeling scenarios and reality will make it possible to evaluate whether they have correctly anticipated reality.
 
 </details>
 
-# Retour sur les principaux scénarios de modélisation
+# Review of the main modeling scenarios
 
-## 1. Mars 2020, les modélisations qui ont conduit le monde à se confiner
+## 1. Mars 2020, the models that led the world to confine itself
 
 <details>
 
 <summary>
 
-**Contexte**
+**Context**
 
 </summary>
 
-En mars 2020, l'incertitude sur les conséquences qu'allaient avoir le covid-19 était grande. Lorsque l'Italie a commencé à être fortement touchée à la mi-mars, de nombreux pays européens ont réalisé que le covid-19 risquait d'avoir un impact significatif. Pour anticiper l'évolution de la pandémie, les décideurs se sont tournés vers le domaine de la modélisation épidémiologique.
+By March 2020, there was a great deal of uncertainty about the impact that covid-19 would have. When Italy began to be heavily affected in mid-March, many European countries realized that covid-19 was likely to have a significant impact. To anticipate the evolution of the pandemic, policymakers turned to the field of epidemiological modeling.
 
-Une équipe de scientifiques de l'Imperial College (Londres), menée par le Professeur Neil Ferguson, a notamment publié le 16 mars le [rapport](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) qui a conduit de nombreux gouvernements européens, dont le [gouvernement français](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html), à confiner leur pays. Les scénarios présentés dans le rapport anticipaient, en l'absence de mesures strictes, de l'ordre de 500 000 morts en moins de 3 mois au Royaume-Uni, et des chiffres similaires pour la France. En revanche, le rapport avançait que la mise en place de mesures strictes (type confinement) permettrait de contenir la vague et serait la seule manière d'éviter une saturation du système hospitalier. Se fiant à ce rapport, les gouvernements ont pour beaucoup choisi de mettre en place des mesures strictes.
+A team of scientists from Imperial College (London), led by Professor Neil Ferguson, published on March 16 the [report](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) that led many European governments, including the [French government](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html), to confine their countries. The scenarios presented in the report anticipated, in the absence of strict measures, in the order of 500,000 deaths in less than 3 months in the UK, and similar figures for France. On the other hand, the report argued that the implementation of strict measures (such as containment) would allow the wave to be contained and would be the only way to avoid saturating the hospital system. Relying on this report, many governments have chosen to implement strict measures.
 
-Bien évidemment, les projections décrivant ce qu'il devrait se passer en l'absence de mesures ne peuvent être comparées avec ce qui s'est réellement passé dans les pays confinés. C'est d'ailleurs l'un des contre-arguments les plus communs aux détracteurs des modèles épidémiologiques: c'est précisément grâce aux mesures que les scénarios de modélisation ne se sont pas réalisés.
+Of course, projections of what would happen in the absence of measurements cannot be compared with what actually happened in the confined countries. This is one of the most common counter-arguments of the critics of epidemiological models: it is precisely because of the measurements that the modelling scenarios did not come true.
 
-Mais il y a un pays qui nous permet de tester la validité des scénarios de modélisation: la Suède. Lors de la première vague, la Suède a choisi de ne pas se confiner, préférant se reposer des mesures plus légères. Il est donc possible de comparer ce que prévoyaient les scénarios pour la Suède et la réalité.
+But there is one country that allows us to test the validity of the modeling scenarios: Sweden. In the first wave, Sweden chose not to confine itself, preferring to rely on lighter measures. It is therefore possible to compare what the scenarios for Sweden predicted and what actually happened.
 
 </details>
 
@@ -167,15 +167,15 @@ Mais il y a un pays qui nous permet de tester la validité des scénarios de mod
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparison of scenarios to real data**.
 
 </summary>
 
-[L'appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) du [rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) de l'Imperial College, publié le 26 mars, contient des modélisations de l'épidémie en Suède.
+[The appendix](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) of the Imperial College [report 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/), published on March 26, contains models of the epidemic in Sweden.
 
-Les 2 premiers graphiques représentent les pics de lits occupés en réanimation et à l'hôpital. Les barres grises représentent les scénarios de l'Imperial College : confinement strict précoce, confinement strict tardif, et aucune mesure. Les barres rouges représentent la réalité. La Suède ayant mis en place des mesures de distanciation sociale sans pour autant imposer un confinement, les chiffres observés auraient dû se trouver quelque part entre les scénarios "confinement" et "aucune mesure". La réalité est tout autre. Alors même que la Suède n'a PAS confiné sa population, les scénarios AVEC confinement surestiment le pic de lits utilisés de 100% à 1000%.
+The first 2 graphs represent the peak occupancy of ICU and hospital beds. The gray bars represent the Imperial College scenarios: early strict containment, late strict containment, and no action. The red bars represent the reality. Since Sweden has implemented social distancing measures without imposing containment, the observed numbers should have been somewhere between the "containment" and "no action" scenarios. The reality is quite different. Even though Sweden did NOT confine its population, the scenarios WITH confinement overestimate the peak of used beds by 100% to 1000%.
 
-La 3e figure présente en gris les différents scénarios de l'Imperial College relatifs à la mortalité, et en rouge le nombre de morts réels. Là encore, les scénarios surestiment largement la mortalité. Le nombre de morts réels correspond au scénario de confinement précoce, ce qui n'a évidemment pas été l'approche suivie par la Suède. Les scénarios intermédiaires de distanciation sociale surestiment quant à eux la mortalité de 200% à 600%.
+The third figure shows the different Imperial College scenarios for mortality in grey, and the actual number of deaths in red. Here again, the scenarios greatly overestimate mortality. The actual number of deaths corresponds to the early containment scenario, which was obviously not the approach taken by Sweden. The intermediate scenarios of social distancing overestimate mortality by 200% to 600%.
 
 </details>
 
@@ -201,19 +201,19 @@ La 3e figure présente en gris les différents scénarios de l'Imperial College 
 ```
 
 
-#### Pic de réanimation
+#### ICU peak
 
 ```{r Sweden_Imperial_ICU_peak, echo=FALSE, out.width="500px"}
 knitr::include_graphics("images/Imperial_Sweden/Sweden_icu.svg")
 ```
 
-#### Pic hospitalier
+#### Hospital peak
 
 ```{r Sweden_Imperial_hosp_peak, echo=FALSE, out.width="500px"}
 knitr::include_graphics("images/Imperial_Sweden/Sweden_hospital.svg")
 ```
 
-#### Décès
+#### Deaths
 
 ```{r Sweden_Imperial_deaths, echo=FALSE, out.width="500px"}
 knitr::include_graphics("images/Imperial_Sweden/Sweden_deaths.svg")
@@ -225,19 +225,19 @@ knitr::include_graphics("images/Imperial_Sweden/Sweden_deaths.svg")
 
 <summary>
 
-**Impact politique et médiatique**
+**Political and media impact**
 
 </summary>
 
-Ces modélisations furent un des principaux éléments déclencheurs du confinement national français (qui influencera d'autres pays européens à suivre la même voie). Dans son rapport du 12 mars 2020, le Conseil Scientifique a affirmé que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de limiter suffisamment la circulation du virus, impliquant la nécessité d'un confinement strict
+These models were one of the main triggers for the French national containment (which will influence other European countries to follow the same path). In its report of March 12, 2020, the Scientific Council affirmed that the classical measures used to limit the spread of epidemics would not allow to sufficiently limit the circulation of the virus, implying the necessity of a strict confinement
 
-> *On ne s'attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) Cette intuition a été illustrée à travers la réalisation d'un modèle COVID19 particulier (Neil Ferguson, communication personnelle)*
+> On ne s'attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) Cette intuition a été illustrée à travers la réalisation d'un modèle COVID19 particulier (Neil Ferguson, communication personnelle)
 >
-> *Extrait du rapport du Conseil Scientifique du 12 mars 2020*
+> Extrait du rapport du Conseil Scientifique du 12 mars 2020
 
-La figure présentée ci-dessus montrant que ces modèles surestimaient largement ce qui se passait avec des mesures classiques de contrôle des épidémies, cette affirmation était vraisemblablement fausse.
+Since the figure above shows that these models vastly overestimated what would happen with conventional disease control measures, this claim was likely to be false.
 
-L'influence politique de ces modélisation se poursuit bien après mars 2020. Lorsqu'en juillet 2021 le Tribunal Constitutionnel espagnol a déclaré inconstitutionnel le premier confinement, [la ministre de la Justice a répliqué en assurant que ce dernier avait sauvé 450 000 vies en Espagne](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees). Si la source de ce chiffre n'est pas précisée, elle correspond bien au scénario pessimiste de [l'appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) du [rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) de l'Imperial College appliqué à l'Espagne. Le cas de la Suède interroge cette affirmation. En effet, si le gouvernement suédois avait confiné sa population, il aurait pu affirmer à l'image de la ministre espagnole que son action avait sauvé 90 000 personnes. Nous savons qu'il n'en est rien, le bilan réel sans confinement étant de 5000 morts, soit 18 fois moins.
+The political influence of these models continues long after March 2020. When in July 2021 the Spanish Constitutional Court declared the first containment unconstitutional, [the Minister of Justice countered by assuring that it had saved 450,000 lives in Spain](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees). While the source of this figure is not specified, it does correspond to the pessimistic scenario of the [appendix](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) of the [report 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) of Imperial College applied to Spain. The case of Sweden questions this statement. Indeed, if the Swedish government had confined its population, it could have claimed, like the Spanish minister, that its action had saved 90,000 people. We know that this is not the case, as the real death toll without confinement was 5,000, or 18 times less.
 
 </details>
 
@@ -245,18 +245,18 @@ L'influence politique de ces modélisation se poursuit bien après mars 2020. Lo
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion of scenario assumptions (technical)**
 
 </summary>
 
-Pour les décès, l'Imperial College a développé 4 scénarios :
+For fatalities, Imperial College has developed 4 scenarios:
 
-1.  Aucune mesure
-2.  Atténuation : distanciation sociale de la population de manière uniforme (40% de réduction des contacts)
-3.  Atténuation : comme 2. mais en augmentant la distanciation sociale des plus de 70 ans (réduction des contacts de 60% pour cette catégorie)
-4.  Suppression des transmissions : distanciation sociale élargie et intense (réduction de 75% des contacts de l'ensemble de la population).
+1.  No action
+2.  Mitigation: social distancing of the population in a uniform way (40% reduction of contacts)
+3.  Mitigation: same as 2. but with increased social distancing of the over 70s (60% reduction in contacts for this category)
+4.  Suppression of transmissions: expanded and intense social distancing (75% reduction in contact for the entire population).
 
-Il est impossible de mesurer la réduction de contacts effective, mais les données de mobilité peuvent fournir une approximation. En Suède, la fréquentation des lieux de travail, gares, et des lieux de commerce et loisirs a été réduite au maximum de 30-45%, et celle des magasins alimentaires et pharmacies de 10-15%. Cela semble confirmer que la Suède ne penchait pas vers le scénario 4, mais plutôt vers une atténuation légère. Pour comparaison, en France, la fréquentation des lieux de travail, de commerce et de loisir a été réduite de 70-90% et celle des magasins alimentaires de 50%, ce qui est aligné avec le scénario 4 de confinement.
+It is impossible to measure the actual reduction in contact, but mobility data can provide an approximation. In Sweden, the use of workplaces, train stations, and shopping and leisure facilities was reduced by a maximum of 30-45%, and food stores and pharmacies by 10-15%. This seems to confirm that Sweden was not leaning towards scenario 4, but rather towards a slight mitigation. For comparison, in France, the use of workplaces, shops and leisure facilities was reduced by 70-90% and food stores by 50%, which is in line with scenario 4 of containment.
 
 <center>
 
@@ -266,25 +266,25 @@ Il est impossible de mesurer la réduction de contacts effective, mais les donn�
 
 </center>
 
-Bien que ne correspondant pas à la réalité, nous avons fait le choix de représenter les scénarios "aucune mesure" pour plusieurs raisons :
+Although not corresponding to reality, we have chosen to represent the "no action" scenarios for several reasons:
 
--   Dans le cas des pics de réanimations et hospitaliers, aucun scénario intermédiaire n'a été produit, seulement les scénarios "confinement" et "0 mesure". Présenter ces 2 scénarios permet donc d'imaginer où aurait dû se trouver la réalité, quelque part entre les 2.
+- In the case of resuscitation and hospital peaks, no intermediate scenario was produced, only the "containment" and "0 measure" scenarios. Presenting these 2 scenarios allows to imagine where the reality should have been, somewhere between the 2.
 
--   Bien qu'irréalistes, les projections "aucune mesure" sont souvent mises en avant comme contrefactuel à l'absence de confinement, comme l'illustre le cas du pic hospitalier évoqué ci-dessus. C'est aussi le cas dans la presse (chiffre de [500 000 morts au Royaume-Uni](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html)) ou par le politique (chiffre de [450 000 personnes sauvées](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees) selon la ministre de la justice espagnole).
+- Although unrealistic, the "no action" projections are often put forward as a counterfactual to the absence of containment, as illustrated by the case of the hospital peak mentioned above. This is also the case in the press (figure of [500,000 deaths in the UK](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html)) or by politicians (figure of [450,000 people saved](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees) according to the Spanish Minister of Justice).
 
 </details>
 
-## 2. Avril 2020, déconfinement Île-de-France
+## 2. April 2020, deconfinement Île-de-France
 
 <details>
 
 <summary>
 
-**Contexte**
+**Context**
 
 </summary>
 
-Le 29 avril 2020, pendant le premier confinement, [un article du journal Les Echos](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309) rapportait des modélisations de l'Institut Pasteur. Ces modélisations portaient sur l'évolution de l'épidémie post-confinement. Le ministère de la Santé indiquait alors que ces modèles sont non finalisés et en cours d'analyse, et par conséquent ne peuvent pas être rendus publics pour le moment. A notre connaissance ils n'ont pas été rendus publics par la suite.
+On April 29, 2020, during the first containment, [an article in the newspaper Les Echos](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309) reported on models from the Pasteur Institute. These models were about the evolution of the epidemic post-containment. The Ministry of Health indicated that these models were not finalized and were being analyzed, and therefore could not be made public for the moment. To our knowledge, they have not been made public subsequently.
 
 </details>
 
@@ -296,7 +296,7 @@ Le 29 avril 2020, pendant le premier confinement, [un article du journal Les Ech
 
 </summary>
 
-Fin juin, le scénario optimiste surestime les données réelles de 66%. Les scénarios médian et pessimiste se situent eux 3.5 et 9 fois au-dessus de la réalité.
+At the end of June, the optimistic scenario overestimates the actual data by 66%. The median and pessimistic scenarios are 3.5 and 9 times above reality.
 
 </details>
 
@@ -327,11 +327,11 @@ scenario %>%
 
 </summary>
 
-Bien que le rapport ayant conduit à ces modélisations n'a pas été à notre connaissance rendu public, celles-ci ont néanmoins été communiquées à la presse et à l'exécutif, comme le rapporte l'article des Echos :
+Although the report that led to these models has not, to our knowledge, been made public, they have nevertheless been communicated to the press and the executive, as reported in the article in Les Echos:
 
-> Ce sont peut-être les modélisations réalisées par l'Institut Pasteur pour l'ARS Ile-de-France et l'AP-HP -par le Pr Simon Cauchemez - qui invitent à la prudence le gouvernement. Datées de mardi et à vocation interne, elles montrent que le nombre de patients en réanimation restera longtemps élevé, en tout cas jusqu'à l'été. Et cela quels que soient les scénarios.
+> It is perhaps the modelling carried out by the Pasteur Institute for the ARS Ile-de-France and the AP-HP - by Professor Simon Cauchemez - that invites the government to be cautious. Dated Tuesday and for internal use, they show that the number of patients in intensive care will remain high for a long time, at least until the summer. And that whatever the scenarios.
 
-La confidentialité du rapport dont sont issues ces courbes pose la question de la transparence des modélisations. De manière similaire, le [rapport du Conseil Scientifique du 12 mars 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) faisait référence aux modélisations de l'Imperial College utilisées dans le rapport en ces termes "Neil Ferguson, communication personnelle", sans information additionnelle.
+The confidentiality of the report from which these curves were taken raises the question of the transparency of the models. Similarly, the [Scientific Council report of March 12, 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) referred to the Imperial College models used in the report as "Neil Ferguson, personal communication", without additional information.
 
 </details>
 
@@ -339,25 +339,25 @@ La confidentialité du rapport dont sont issues ces courbes pose la question de 
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion of scenario assumptions (technical)**
 
 </summary>
 
-Les modélisations n'étant pas publiques, il ne nous a pas été possible d'étudier les hypothèses des scénarios. L'article des Echos fait simplement mention de différents taux de reproduction du virus, de 1.2, 1.5, ou plus.
+As the models are not public, it was not possible for us to study the assumptions of the scenarios. The article in Les Echos simply mentions different reproduction rates of the virus, 1.2, 1.5, or more.
 
 </details>
 
-## 3. Novembre 2020, 2e vague, et 2e confinement
+## 3. November 2020, 2nd wave, and 2nd containment
 
 <details>
 
 <summary>
 
-**Contexte**
+**Context**
 
 </summary>
 
-Le 26 octobre, l'Institut Pasteur produit des scénarios d'évolution de l'épidémie en l'absence de confinement. Ce rapport n'a à notre connaissance pas été rendu public, et nous n'avons pas pu le consulter. Nous avons simplement trouvé une figure extraite du rapport, que l'on peut trouver sur cette [page](https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/).
+On October 26, the Pasteur Institute produced scenarios for the evolution of the epidemic in the absence of containment. To our knowledge, this report has not been made public, and we have not been able to consult it. We simply found a figure extracted from the report, which can be found on this [page](https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/).
 
 <center>
 
@@ -365,9 +365,9 @@ Le 26 octobre, l'Institut Pasteur produit des scénarios d'évolution de l'épid
 
 </center>
 
-Le 28 octobre, face à la perspective présentée par ces chiffres, Emmanuel Macron annonce un confinement généralisé, qui prendra effet le 30 octobre.
+On October 28, faced with the prospect presented by these figures, Emmanuel Macron announced a generalized containment, which would take effect on October 30.
 
-Le 30 octobre, l'Institut Pasteur produit une mise à jour de ses scénarios pour tenir compte de l'impact du confinement. Le rapport n'a pas été rendu public à notre connaissance. Certains médias y ont cependant eu accès, et ont reproduit les scénarios sous forme d'infographie. [L'article des Echos](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656) constitue notre source pour nos graphiques.
+On October 30, the Institut Pasteur produced an update of its scenarios to take into account the impact of containment. The report has not been made public to our knowledge. However, some media have had access to it, and have reproduced the scenarios in the form of computer graphics. [Les Echos article](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656) is our source for our graphics.
 
 </details>
 
@@ -375,17 +375,17 @@ Le 30 octobre, l'Institut Pasteur produit une mise à jour de ses scénarios pou
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparison of scenarios to real data**
 
 </summary>
 
-Le scénario le plus optimiste est proche du pic réel de lits occupés en réanimation (+15%). Le scénario médian et le plus pessimiste se trouvent eux à +30% et +100%.
+The most optimistic scenario is close to the actual peak of occupied ICU beds (+15%). The median and most pessimistic scenarios are at +30% and +100%.
 
 </details>
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Lits de réanimation
+#### ICU peak
 
 ```{r 2020_10_30_Pasteur_ICU_beds}
 #Lits de réanimation
@@ -406,7 +406,7 @@ scenario %>%
        caption = "\ntwitter : twitter : @Covid_Scenarios")
 ```
 
-#### Admissions en réanimation
+#### ICU admissions
 
 ```{r 2020_10_30_Pasteur_ICU_adm}
 #Admissions en réanimation
@@ -433,13 +433,13 @@ scenario %>%
 
 <summary>
 
-**Impact politique et médiatique**
+**Political and media impact**
 
 </summary>
 
-Les modélisations du 26 octobre ont été un des élément déclencheur du 2ème confinement. Notamment, [lors de son allocution du 28 octobre](https://www.vie-publique.fr/discours/276951-emmanuel-macron-28102020-covid-19), Emmanuel Macron a annoncé que le nombre de patients en réanimation dépasserait les 9000 "quoi que nous fassions". Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. On constate qu'en vue de justifier une décision politique, seule la modélisation la plus pessimiste a été mise en avant par l'exécutif. Elle a aussi été présentée comme une certitude, alors qu'il ne s'agissait que d'un scénario parmi d'autres.
+The modelling of October 26 was one of the triggers for the 2nd containment. Notably, [during his October 28 speech](https://www.vie-publique.fr/discours/276951-emmanuel-macron-28102020-covid-19), Emmanuel Macron announced that the number of patients in intensive care would exceed 9000 "whatever we do". The actual peak will be half that number, at about 4800 critical care beds. It can be seen that in order to justify a political decision, only the most pessimistic model was put forward by the executive. It was also presented as a certainty, even though it was only one scenario among others.
 
-Ces modélisations ont également été largement reprises dans la presse: ["Deuxième vague : les scénarios qui inquiètent"](https://www.tf1info.fr/sante/video-deuxieme-vague-les-scenarios-qui-inquietent-2168899.html) titrait ainsi LCI après l'annonce du 2ème confinement, présentant les scénarios dont les pics de réanimation étaient de 5500, 6200 et 9000 patients.
+These models were also widely reported in the press: ["Second wave: worrying scenarios"](https://www.tf1info.fr/sante/video-deuxieme-vague-les-scenarios-qui-inquietent-2168899.html) was the headline on LCI after the announcement of the second containment, presenting scenarios with ICU peak levels of 5,500, 6,200 and 9,000 patients.
 
 </details>
 
@@ -447,29 +447,29 @@ Ces modélisations ont également été largement reprises dans la presse: ["Deu
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion of scenario assumptions (technical)**
 
 </summary>
 
-Le rapport n'ayant pas été rendu public, il ne nous a pas été possible d'explorer en détail les hypothèses des scénarios. Selon les éléments rapportés par Les Echos, les différents scénarios correspondent à différentes valeurs de taux de reproduction "R" de 0.7 à 1.2, reflétant une efficacité plus ou moins marquée du confinement.
+As the report has not been made public, it has not been possible for us to explore the assumptions of the scenarios in detail. According to the elements reported by Les Echos, the different scenarios correspond to different values of reproduction rate "R" from 0.7 to 1.2, reflecting a more or less marked efficiency of the containment.
 
 </details>
 
-## 4. Hiver 2021, couvre-feu étendu
+## 4. Winter 2021, extended curfew
 
 <details>
 
 <summary>
 
-**Contexte**
+**Context**
 
 </summary>
 
-Au cours d'un hiver 2020-2021 marqué par un couvre-feu étendu, une dégradation de la situation sanitaire a mené Inserm et l'Institut Pasteur à publier des scénarios de modélisations de mi-janvier à mi-février. Ces scénarios ont servi de base pour envisager la mise en place d'un confinement strict début février, qui n'aura finalement pas eu lieu, offrant la possibilité de comparer les projections à ce qu'il s'est réellement passé.
+During a winter 2020-2021 marked by an extended curfew, a deterioration of the health situation led Inserm and the Pasteur Institute to publish modelling scenarios from mid-January to mid-February. These scenarios were used as a basis to consider the implementation of a strict containment in early February, which did not take place in the end, offering the possibility to compare the projections with what actually happened.
 
-De premiers confinements régionaux sont mis en place le 20 mars, suivis plus tard par d'autres jusqu'au confinement national le 3 avril. Le temps de latence entre la mise en place des mesures et leur effet sur les hospitalisations étant au minimum d'une semaine, voire 2 à 3 semaines comme l'indique le [rapport du conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) ("les premiers effets des mesures adoptées [...] ne peuvent apparaître qu'après deux à trois semaines"), nous arrêtons notre graphique au 27 mars. Au-delà, il n'est plus légitime de comparer la dynamique de la pandémie aux scénarios "sans confinement".
+The first regional containments were implemented on March 20, followed later by others until the national containment on April 3. The latency between the implementation of measures and their effect on hospitalizations being at least one week, and even 2 to 3 weeks as indicated by the [scientific council report](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) ("the first effects of the measures adopted [...] can only appear after two to three weeks"), we stop our graph at March 27. Beyond that point, it is no longer legitimate to compare the dynamics of the pandemic to the "no containment" scenarios.
 
-Avant ces dates, un certain nombre de mesures n'ont pas pu impacter la dynamique nationale de l'épidémie : le 25 février confinement le week-end à Dunkerque et une partie des Alpes-Maritimes, et le 4 mars confinement le week-end dans le Pas-de-Calais, ainsi que les centres commerciaux de plus de 10 000 m2 fermés.
+Before these dates, a number of measures could not impact the national dynamics of the epidemic: on 25 February weekend containment in Dunkerque and part of the Alpes-Maritimes, and on 4 March weekend containment in Pas-de-Calais, as well as closed shopping centers of more than 10,000 m2.
 
 </details>
 
@@ -477,18 +477,17 @@ Avant ces dates, un certain nombre de mesures n'ont pas pu impacter la dynamique
 
 <summary>
 
-**Comparaison des scénarios aux données réelles : scénarios de l'Inserm**
+**Comparison of scenarios to real data: Inserm scenarios**
 
 </summary>
 
-Les scénarios réalisés pendant 1 mois pointent tous vers une augmentation exponentielle des admissions à l'hôpital. La réalité sera une légère diminution suivi d'une augmentation ramenant environ au niveau initial. Quasiment tous les scénarios dépassent les 30 000 admissions hebdomadaires avant la mi-mars sans signe de ralentissement de la dynamique, alors que la réalité se trouvait aux alentours de 10 000, soit 3 fois moins. Le scénario le plus optimiste surestime les hospitalisation d'un facteur 50-100%.
+The 1-month scenarios all point to an exponential increase in hospital admissions. The reality will be a slight decrease followed by an increase back to about the initial level. Almost all scenarios exceed 30,000 weekly admissions by mid-March with no sign of slowing down the dynamics, while the reality was around 10,000, i.e. 3 times less. The most optimistic scenario overestimates hospitalizations by a factor of 50-100%.
 
 </details>
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Scénarios du 16 janvier
-
+#### January 16 scenarios
 ```{r 2021_01_16_Inserm}
 #16 janvier
 scenario <- read.csv("data/2021_01_16_INSERM/weekly_hospital.csv", sep=";") %>%
@@ -510,7 +509,7 @@ scenario %>%
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Scénarios du 2 février
+#### February 2 scénarios
 
 ```{r 2021_02_02_Inserm}
 #2 février
@@ -533,7 +532,7 @@ scenario %>%
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Scénarios du 14 février
+#### February 14 scénarios
 
 ```{r 2021_02_14_Inserm}
 #14 février
@@ -562,21 +561,21 @@ scenario %>%
 
 <summary>
 
-**Comparaison des scénarios aux données réelles : scénarios de l'Institut Pasteur**
+**Comparison of scenarios to real data: Institut Pasteur scenarios**
 
 </summary>
 
-Pour le rapport du 8 février, les 2 scénarios principaux se prolongeant en mars reflètent une hypothèse "sans vaccination" et une hypothèse "optimiste" de vaccination. Il est précisé qu' « en pratique, l'impact de la campagne actuelle est susceptible d'être intermédiaire entre les scénarios avec et sans vaccination », d'où notre choix de représenter ces 2 courbes. Plus loin dans le rapport sont présentés 2 autres variantes secondaires illustrant l'influence d'une faible variation du taux de reproduction : ce sont les courbes s'arrêtant en mars.
+For the February 8 report, the 2 main scenarios extending into March reflect a "no vaccination" hypothesis and an "optimistic" vaccination hypothesis. It is specified that "in practice, the impact of the current campaign is likely to be intermediate between the scenarios with and without vaccination", hence our choice to represent these 2 curves. Later in the report, two other secondary variants are presented to illustrate the influence of a small variation in the reproduction rate: these are the curves stopping in March.
 
-Seul le scénario le plus optimiste colle à la réalité, bien que ce n'était pas le scénario principal présenté aux décideurs. Les autres surestiment les admissions réelles d'un facteur 50-100%.
+Only the most optimistic scenario fits reality, although it was not the main scenario presented to the decision makers. The others overestimate actual admissions by a factor of 50-100%.
 
-Pour le rapport du 23 février, les scénarios présentés collent globalement bien à l'observation. Il n'est pas fait mention du décalage observé entre la réalité et les scénarios publiés 15 jours auparavant.
+For the February 23 report, the scenarios presented are generally consistent with observation. No mention is made of the discrepancy observed between reality and the scenarios published 15 days earlier.
 
 </details>
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Scénarios du 8 février
+#### February 8 scénarios
 
 ```{r 2021_02_08_Pasteur}
 # February 8 2021
@@ -600,7 +599,7 @@ scenario %>%
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Scénarios du 23 février
+#### February 23 scénarios
 
 ```{r 2021_02_23_Pasteur}
 
@@ -633,17 +632,17 @@ scenario %>%
 
 <summary>
 
-**Auto-évaluation de l'Institut Pasteur**
+**Institut Pasteur's self-evaluation**
 
 </summary>
 
-Une évaluation rétrospective portant sur le rapport du 8 février sera faite dans [un rapport ultérieur du 26 avril](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf). Il y est indiqué que
+A retrospective assessment of the February 8 report will be made in [a subsequent April 26 report](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf). It states that
 
-> *"dès le 8 février, ce modèle avait anticipé que le couvre-feu serait efficace pour contenir la circulation du virus historique mais n'empêcherait pas une augmentation importante des hospitalisations en l'absence de mesures supplémentaires"*
+> As early as February 8, this model anticipated that the curfew would be effective in containing the circulation of the historical virus but would not prevent a significant increase in hospitalizations in the absence of additional measures.
 
-Cette affirmation est accompagnée de la figure ci-dessous. En 1 an de pandémie, cette figure constituera la première comparaison rétrospective officiellement publiée par l'Institut Pasteur.
+This statement is accompanied by the figure below. In 1 year of pandemic, this figure will be the first retrospective comparison officially published by the Pasteur Institute.
 
-Nous n'avons cependant pas trouvé une telle projection dans [le rapport du 8 févrie](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf)r. Toutes celles que nous avons trouvée sont représentées sur nos graphiques présentés ci-dessus. 
+However, we did not find such a projection in [the February 8 report](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf)r. All those we found are represented on our graphs presented above. 
 
 <center>
 
@@ -657,11 +656,11 @@ Nous n'avons cependant pas trouvé une telle projection dans [le rapport du 8 f�
 
 <summary>
 
-**Impact politique et médiatique**
+**Political and media impact**
 
 </summary>
 
-Les prévisions de l'INSERM ont été mises en avant dans un [rapport spécial du Conseil Scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) qui demandait la mise en place d'un confinement strict à partir du lundi 8 février 2021. Selon ces modélisations, le nombre d'hospitalisations hebdomadaires aurait dû être de plus de 30 000 à cette date (en réalité autour de 10 000), et continuer d'augmenter exponentiellement sans confinement strict (qui n'aura finalement lieu qu'un mois plus tard).
+The INSERM forecasts were put forward in a [special report of the Scientific Council](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) which called for the implementation of strict containment from Monday 8 February 2021. According to these models, the number of weekly hospitalizations should have been more than 30,000 at this date (in reality around 10,000), and continue to increase exponentially without strict containment (which will finally take place only one month later).
 
 </details>
 
@@ -669,47 +668,47 @@ Les prévisions de l'INSERM ont été mises en avant dans un [rapport spécial d
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion of scenario assumptions (technical)**
 
 </summary>
 
-A propos des scénarios de l'INSERM :
+About the INSERM scenarios:
 
--   [rapport du 16 janvier](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (1, 1.1 et 1.2), couplés à un variant alpha 50% ou 70% plus transmissible. Les courbes sont issues de la figure 1.
+- [January 16 report](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf): the scenarios correspond to 3 reproduction rates of the historical variant (1, 1.1 and 1.2), coupled with a 50% or 70% more transmissible alpha variant. The curves are taken from Figure 1.
 
--   [rapport du 2 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (0.9, 1.1 et 1.2) couplés à un variant alpha 50% plus transmissible. Les courbes sont les courbes grises de la figure 2 (redondance avec les courbes des figures 1 et 2).
+- [report of February 2](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf): the scenarios correspond to 3 reproduction rates of the historical variant (0.9, 1.1 and 1.2) coupled with a more transmissible alpha variant 50%. The curves are the gray curves in Figure 2 (redundant with the curves in Figures 1 and 2).
 
--   [rapport du 14 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf) : variant alpha 50% plus transmissible. La transmissibilité du virus historique, n'est pas renseignée. En plus de la projection standard, 2 scénarios explorant une variation de la transmission du variant historique de +/- 10% illustrent un allègement ou un renforcement des mesures. La réalité n'a correspondu à aucun de ces 2 cas de figure, mais nous avons fait le choix de représenter ces 2 scénarios pour ne pas nous faire accuser d'exclusion arbitraire (la variation de 10% pouvant se produire naturellement de manière aléatoire).
+- [February 14 report](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf): 50% more transmissible alpha variant. The transmissibility of the historical virus is not given. In addition to the standard projection, 2 scenarios exploring a variation in the transmission of the historical variant of +/- 10% illustrate a reduction or a reinforcement of the measures. The reality did not correspond to either of these 2 scenarios, but we chose to represent these 2 scenarios so as not to be accused of arbitrary exclusion (the 10% variation could occur naturally in a random manner).
 
-A propos des scénarios de l'Institut Pasteur :
+About the Institut Pasteur scenarios:
 
--   [rapport du 8 février](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (0.9, 0.95 et 1), couplés à un variant alpha 40%, 50% ou 70% plus transmissible. Les courbes sont issues des figures 2a, 6a, 7c
+- [report of February 8](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf): the scenarios correspond to 3 reproduction rates of the historical variant (0.9, 0.95 and 1), coupled with a 40%, 50% or 70% more transmissible alpha variant. The curves are taken from figures 2a, 6a, 7c
 
--   [rapport du 23 février](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525) : de nombreuses variantes sont proposées, car comme le souligne le rapport face à la grande incertitude "une unique prévision pour les prochains mois n'est pas possible". Dans le détail les différentes hypothèses portent sur la plus grande transmissibilité du variant alpha (+40%, 50% ou 70%) et un changement de trajectoire épidémique (diminution et augmentation de 8% ou 16%) qui intervient à différentes dates (22 février ou 8 mars). Les courbes sont extraites des figures 2c, 5a, 5c, 5e, en s'arrêtant au 27 mars comme expliqué dans le paragraphe "contexte".
+- [report of February 23](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525): many variants are proposed, because as the report underlines in view of the great uncertainty "a single forecast for the coming months is not possible". In detail, the different hypotheses concern the greater transmissibility of the alpha variant (+40%, 50% or 70%) and a change in the epidemic trajectory (decrease and increase of 8% or 16%) which occurs at different dates (February 22 or March 8). The curves are extracted from figures 2c, 5a, 5c, 5e, stopping at 27 March as explained in the "context" paragraph.
 
-Le rapport du 16 janvier de l'INSERM mérite précision, car il y est dit que l'effet du couvre-feu anticipé à 18 heures n'est pas pris en compte, mais que le scénario le plus optimiste pourrait refléter la mesure. Aurions-nous dû ne garder que celui-ci et exclure les autres scénarios ? Notre décision de tous les conserver s'appuie sur plusieurs points :
+The INSERM report of January 16 deserves clarification, because it says that the effect of the early curfew at 6 pm is not taken into account, but that the most optimistic scenario could reflect the measure. Should we have kept only this one and excluded the other scenarios? Our decision to keep them all was based on several points:
 
--   Tout d'abord les auteurs ont fait le choix de les représenter, indiquant qu'ils validaient eux-mêmes la pertinence de ces scénarios. En effet ils n'hésitent pas à affirmer que "les nouvelles hospitalisations devraient atteindre environ 25 000 entre mi-février et début avril en l'absence d'intervention" »
+- First, the authors made the choice to represent them, indicating that they themselves validated the relevance of these scenarios. Indeed, they do not hesitate to state that "new hospitalizations should reach about 25,000 between mid-February and early April in the absence of intervention".
 
--   En s'appuyant sur ces résultats, ils n'hésitaient pas non plus à donner des recommandations politiques explicites « Ces résultats montrent la nécessité de renforcer les mesures de distanciation sociale » et ce alors même bien que le couvre-feu, dont le but même est d'éviter des mesures plus restrictives, n'était pas modélisé...
+- Based on these results, they did not hesitate to give explicit policy recommendations "These results show the need to strengthen social distancing measures" and this even though the curfew, whose very purpose is to avoid more restrictive measures, was not modeled...
 
--   Enfin, on voit que les scénarios du 16 janvier sont très similaires à ceux du 2 février, alors même que ceux-ci "intègrent de façon effective toutes les mesures de distanciation sociale", indiquant que la prise en compte du couvre-feu ne change pas grand-chose
+- Finally, we see that the scenarios of January 16 are very similar to those of February 2, even though these "effectively integrate all the social distancing measures", indicating that taking into account the curfew does not change much
 
 </details>
 
-## 5. Mai-Juin 2021, sortie du 3e confinement
+## 5. May-June 2021, exit from the 3rd lockdown
 
 <details>
 
 <summary>
 
-**Contexte**
+**Context**
 
 </summary>
 
-Des scénarios sont sortis les [26 avril](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf) et [21 mai](https://modelisation-covid19.pasteur.fr/loosening/Mise_a_jour_scenarios_de_levee_des_mesures_de_freinage_20210521.pdf), portant sur les trajectoires épidémiques pour la sortie du 3e confinement et l'été. Nous arrêtons les comparaisons à la mi-juin, moment de l'apparition variant delta, non pris en compte dans les modèles.
+Scenarios were released on [April 26](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf) and [May 21](https://modelisation-covid19.pasteur.fr/loosening/Mise_a_jour_scenarios_de_levee_des_mesures_de_freinage_20210521.pdf), covering epidemic trajectories for the exit from the 3rd containment and the summer. We stop the comparisons in mid-June, the time of the delta variant onset, not considered in the models.
 
-Pour le rapport du 21 mai, nous n'avons pas eu besoin de mener nous-mêmes une analyse. En effet Simon Cauchemez, en charge de l'équipe modélisation de l'Institut Pasteur, avait déjà publié [une comparaison informelle sur son compte twitter](https://twitter.com/SCauchemez/status/1405129313721241603?cxt=HHwWhsC-_dDqgoAnAAAA), reproduite ici. A notre connaissance cela n'a pas été fait pour le rapport du 26 avril, et nous avons donc procédé nous-mêmes à la comparaison.
+For the May 21 report, we did not need to conduct an analysis ourselves. Indeed Simon Cauchemez, in charge of the modeling team of the Institut Pasteur, had already published [an informal comparison on his twitter account](https://twitter.com/SCauchemez/status/1405129313721241603?cxt=HHwWhsC-_dDqgoAnAAAA), reproduced here. To our knowledge, this was not done for the April 26 report, and we have therefore made the comparison ourselves.
 
 </details>
 
@@ -717,19 +716,19 @@ Pour le rapport du 21 mai, nous n'avons pas eu besoin de mener nous-mêmes une a
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparison of scenarios to actual data**
 
 </summary>
 
-Pour le premier rapport, les scénarios se situent à la mi-juin au-dessus de la réalité, la surestimation allant d'un peu moins de 100% à 500%.
+For the first report, the scenarios are above reality in mid-June, with overestimation ranging from just under 100% to 500%.
 
-En revanche la décrue observée suit fidèlement le scénario du second rapport, comme le montre la capture d'écran de Simon Cauchemez. Ce dernier ne fait pas mention du premier rapport.
+On the other hand, the observed recession follows faithfully the scenario of the second report, as shown in the screenshot of Simon Cauchemez. He does not mention the first report.
 
 </details>
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Scénarios du 26 avril
+#### Scenarios of April 26
 
 ```{r 2021_04_26_Pasteur}
 scenario <- read.csv("data/2021_04_26_Pasteur/new_hosp.csv", sep=";") %>%
@@ -750,7 +749,7 @@ scenario %>%
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Scénarios du 21 mai
+#### Scenarios of May 21
 
 ```{r Cauchemez_twitter, echo=FALSE, out.width="400px"}
 knitr::include_graphics("images/Pasteur_2021_Avril/Cauchemez.png")
@@ -762,11 +761,11 @@ knitr::include_graphics("images/Pasteur_2021_Avril/Cauchemez.png")
 
 <summary>
 
-**Impact politique et médiatique**
+**Political and media impact**
 
 </summary>
 
-Ces modélisations ont appuyé le [rapport du Conseil Scientifique du 6 mai 2021](https://www.vie-publique.fr/sites/default/files/rapport/pdf/279792.pdf). Bien que le Conseil Scientifique précise que "Ces projections [...] ne sont pas des prédictions", il s'appuie sur celles-ci pour estimer que "sous des hypothèses plausibles, un rebond important de l'épidémie est possible durant la période estivale si les mesures de contrôle sont relâchées trop rapidement, et cela même lorsqu'on considère un rythme important de vaccination.". C'est un des arguments qui à poussé le Conseil Scientifique à se positionner en faveur d'une réouverture des activités sociales "prudente et maîtrisée" suite au 3ème confinement.
+These models supported the [Scientific Council report of May 6, 2021](https://www.vie-publique.fr/sites/default/files/rapport/pdf/279792.pdf). Although the Scientific Council specifies that "These projections [...] are not predictions", it relies on them to estimate that "under plausible assumptions, a significant rebound of the epidemic is possible during the summer period if control measures are relaxed too quickly, even when considering a significant rate of vaccination. This is one of the arguments that pushed the Scientific Council to position itself in favor of a "prudent and controlled" reopening of social activities following the 3rd containment.
 
 </details>
 
@@ -774,19 +773,19 @@ Ces modélisations ont appuyé le [rapport du Conseil Scientifique du 6 mai 2021
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion of scenario assumptions (technical)**
 
 </summary>
 
-Pour le rapport du 26 avril, les courbes sont extraites des figures 3b et 3d. Les hypothèses faites dans les scénarios sont les suivantes :
+For the April 26 report, the curves are taken from Figures 3b and 3d. The assumptions made in the scenarios are as follows:
 
--   Un variant alpha plus transmissible de 60% ou 40% comparé à la souche originelle
+- A 60% or 40% more transmissible alpha variant compared to the original strain
 
--   Des levées des mesures plus ou moins rapides, se traduisant par des taux de reproduction de reprise R de 1 à 1.3, à partir du 15 mai. Nous avons exclu le scénario le plus pessimiste (R = 1.3) qui correspondait à une levée quasi totale des mesures dès la mi-mai, ce qui n'a pas été le cas.
+- More or less rapid lifts of the measures, resulting in recovery reproduction rates R of 1 to 1.3, from May 15. We excluded the most pessimistic scenario (R = 1.3) which corresponded to an almost total lifting of the measures from mid-May, which was not the case.
 
--   Des hypothèses médianes ou pessimistes concernant la réduction des hospitalisations
+- Median or pessimistic assumptions regarding the reduction of hospitalizations
 
--   Un rythme de distribution des doses de vaccin de 350 000 ou 500 000 doses par jour. Nous n'avons retenu que les scénarios à 500 000 doses/jour, qui sont proches de la réalité, comme le montre le graphique ci-dessous.
+- A vaccine distribution rate of 350,000 or 500,000 doses per day. We have retained only the 500,000 doses/day scenarios, which are close to reality, as shown in the graph below.
 
 <center>
 
@@ -794,13 +793,13 @@ Pour le rapport du 26 avril, les courbes sont extraites des figures 3b et 3d. Le
 
 </center>
 
-Pour le rapport du 21 mai, nous n'avons pas eu besoin de vérifier les hypothèses, Simon Cauchemez ayant lui-même comparé la trajectoire épidémique à ses scénarios.
+For the May 21 report, we did not need to check the hypotheses, as Simon Cauchemez himself had compared the epidemic trajectory to his scenarios.
 
-Dans les 2 cas nous arrêtons la comparaison à la mi-juin, lorsque l'apparition du variant delta non prévue par les modèles rend les hypothèses caduques.
+In both cases we stop the comparison in mid-June, when the appearance of the delta variant not predicted by the models renders the hypotheses null and void.
 
 </details>
 
-## 6. Août 2021, 4e vague et variant delta
+## 6. August 2021, 4th wave and delta variant
 
 <details>
 
@@ -810,11 +809,11 @@ Dans les 2 cas nous arrêtons la comparaison à la mi-juin, lorsque l'apparition
 
 </summary>
 
-Un [premier rapport de l'Institut Pasteur est sorti le 9 juillet 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_dynamique_du_variant_Delta_en_France_metropolitaine_20210709.pdf) dans un contexte de propagation du variant delta. Deux des trois scénarios présentés anticipaient pour fin août un nombre de lits de soin critiques au moins égal à la 2ème vague, et en l'absence de mesures un pic courant septembre bien au-dessus de la 1ere vague.
+A [first report from the Pasteur Institute came out on July 9, 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_dynamique_du_variant_Delta_en_France_metropolitaine_20210709.pdf) in the context of the spread of the delta variant. Two of the three scenarios presented anticipated a number of critical care beds by the end of August at least equal to the 2nd wave, and in the absence of measures a peak in September well above the 1st wave.
 
-Face à la perspective d'une submersion hospitalière que suggéraient ces scénarios, le passe sanitaire élargi a été acté le 21 juillet, entraînant une forte augmentation des vaccinations et rendant caduques les hypothèses du rapport du 9 juillet.
+Faced with the prospect of hospital flooding suggested by these scenarios, the extended health pass was implemented on 21 July, leading to a sharp increase in vaccinations and rendering the hypotheses of the 9 July report obsolete.
 
-Pour remédier à cela, l'Institut Pasteur a publié 2 nouveaux rapports, les [26 juillet](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Acceleration_vaccination_et_Delta_20210726.pdf) et [5 août,](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Dynamiques_regionales_des_hospitalisations_20210805.pdf) afin de tenir compte de l'effet du pass sanitaire ; ce sont ces 2 rapports que nous comparons à la trajectoire réelle.
+To remedy this, the Institut Pasteur published two new reports, on [July 26](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Acceleration_vaccination_et_Delta_20210726.pdf) and [August 5](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Dynamiques_regionales_des_hospitalisations_20210805.pdf), to take into account the effect of the health pass; it is these two reports that we compare with the actual trajectory.
 
 </details>
 
@@ -822,21 +821,21 @@ Pour remédier à cela, l'Institut Pasteur a publié 2 nouveaux rapports, les [2
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparison of scenarios to actual data**.
 
 </summary>
 
-Pour le premier rapport, la réalité est environ 2 fois moins grande que les scénarios les plus optimistes, 3 à 4 fois moins grande que les scénarios médians, 10 fois moins grande que les scénarios pessimistes.
+For the first report, the reality is about 2 times smaller than the most optimistic scenarios, 3 to 4 times smaller than the median scenarios, 10 times smaller than the pessimistic scenarios.
 
-Le rapport publié 10 jour plus tard corrige partiellement cette surestimation, la réalité correspondant environ au scénario le plus optimiste, mais restant 2 fois moins grande que le scénario médian et 4 fois moindre que le scénario pessimiste.
+The report published 10 days later partially corrects this overestimation, the reality corresponding approximately to the most optimistic scenario, but remaining 2 times smaller than the median scenario and 4 times smaller than the pessimistic scenario.
 
 </details>
 
-**Scénarios du 26 juillet**
+**July 26 Scenarios**
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Lits de soins critiques
+#### ICU Beds
 
 ```{r 2021_07_26_Pasteur_ICU_beds}
 scenario <- read.csv("data/2021_07_26_Pasteur/beds_SC.csv", sep=";") %>%
@@ -856,7 +855,7 @@ scenario %>%
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Admissions en soins critiques
+#### ICU Admissions
 
 ```{r 2021_07_26_Pasteur_ICU_adm}
 
@@ -878,7 +877,7 @@ scenario %>%
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Admissions à l'hôpital
+#### Hospital Admissions
 
 ```{r 2021_07_26_Pasteur_hosp_adm}
 #Nouvelles admissions à l'hôpital
@@ -901,11 +900,11 @@ scenario %>%
 
 ###
 
-**Scénarios du 5 août**
+**August 5 Scenarios**
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Lits de soins critiques
+#### ICU Beds
 
 ```{r 2021_08_05_Pasteur_ICU_beds}
 #Lits de soins critiques
@@ -926,7 +925,7 @@ scenario %>%
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Admissions en soins critiques
+#### ICU Admissions
 
 ```{r 2021_08_05_Pasteur_IDU_adm}
 
@@ -949,7 +948,7 @@ scenario %>%
   
 ```
 
-#### Admissions à l'hôpital
+#### Hospital Admissions
 
 ```{r 2021_08_05_Pasteur_hosp_adm}
 #Admissions à l'hopital
@@ -976,46 +975,47 @@ scenario %>%
 
 <summary>
 
-**Impact politique et médiatique**
+**Political and media impact**
 
 </summary>
 
-En ligne avec les projections présentées, le président du conseil scientifique [Jean-François Delfraissy prévoyait alors une situation hospitalière compliquée pour fin août lors de son audition devant les sénateurs](https://www.publicsenat.fr/article/parlementaire/covid-19-jean-francois-delfraissy-prevoit-une-situation-tres-complexe-dans-les) :
+In line with the projections presented, the president of the scientific council [Jean-François Delfraissy predicted a complicated hospital situation for the end of August during his hearing before the senators](https://www.publicsenat.fr/article/parlementaire/covid-19-jean-francois-delfraissy-prevoit-une-situation-tres-complexe-dans-les):
 
-> *"Le modèle montre bien que d'ici fin août, nous allons nous trouver dans une situation très complexe, avec un impact sur le système de soins"*
+> The model clearly shows that by the end of August, we will find ourselves in a very complex situation, with an impact on the care system.
 
-Cette mise en avant des projections de l'Institut Pasteur au Sénat est intervenu avant que celui-ci ne se prononce sur l'extension du pass sanitaire, et a donc pu jouer un rôle dans l'avis des sénateurs.
+This presentation of the Institut Pasteur's projections to the Senate occurred before the Senate voted on the extension of the health pass, and may therefore have played a role in the senators' opinion.
 
-Les modélisations de l'Institut Pasteur ont été également [utilisé par le Conseil d'Etat comme argument](https://www.conseil-etat.fr/content/download/160458/file/454792-454818.pdf) pour rejeter les demandes de référés-libertés au sujet de l'extension du pass sanitaire. Pour rejeter ces demandes, le Conseil d'Etat a notamment expliqué que
+The Institut Pasteur's modelling was also [used by the Conseil d'Etat as an argument](https://www.conseil-etat.fr/content/download/160458/file/454792-454818.pdf) to reject the applications for interim relief concerning the extension of the health pass. In rejecting these requests, the Conseil d'Etat explained in particular that
 
-> *les données "pourraient se révéler encore plus préoccupantes au début du mois d'août, selon les modélisations de l'Institut Pasteur."*
+> The data "could be even more worrisome in early August, according to the Institut Pasteur's modelling.
 
-Il est intéressant de noter que le Royaume-Uni a été confronté à la même situation : une augmentation des hospitalisations en juillet, accompagnée de scénarios suggérant une submersion de l'hôpital. Contrairement à la France, le Royaume-Uni n'a pas mis en place de pass sanitaire et a levé presque l'intégralité des mesures de contrôle. Nous détaillons cela dans la section suivante.
+Interestingly, the United Kingdom faced the same situation: an increase in hospitalizations in July, accompanied by scenarios suggesting hospital overwhelm. Unlike France, the UK did not implement a health pass and lifted almost all control measures. We detail this in the next section.
+
 </details>
 
 <details>
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion of scenario assumptions (technical)**
 
 </summary>
 
-Le scénarios du premier rapport sont extraits des figures 4, 5 et 6. Les scénarios dont les hypothèses ne collaient pas à la réalité ont été exclus de la comparaison, permettant de ramener le nombre de variantes de 108 à seulement 6 pour les admissions et 12 pour le nombre de lits occupés. Détails des hypothèses :
+The scenarios from the first report are taken from Figures 4, 5 and 6. Scenarios with assumptions that did not match reality were excluded from the comparison, reducing the number of variants from 108 to only 6 for admissions and 12 for the number of occupied beds. Details of assumptions:
 
--   Durée de passage en soins critiques : 14.6 jours ou 10 jours
+- Time to critical care: 14.6 days or 10 days
 
--   Réduction du nombre de reproduction effectif le portant à 1.5, 1.8 ou 2 en raison des mesures barrières et du pass sanitaire.
+- Reduction in the number of effective replicas to 1.5, 1.8 or 2 due to barrier measures and health pass.
 
--   Adhésion vaccinale des \>60 ans : 90 ou 95%. Nous avons seulement retenu les scénarios 90%, en ligne avec le graphique ci-dessous.
+- Vaccine adherence of >60 years: 90 or 95%. We have retained only the 90% scenarios, in line with the graph below.
 
--   Adhésion vaccinale des 18-59 ans : 70% ou 90%. Nous avons seulement retenu les scénarios 90%, en ligne avec le graphique ci-dessous.
+- Vaccination adherence of 18-59 year olds: 70% or 90%. We have only retained the 90% scenarios, in line with the graph below.
 
--   Adhésion vaccinale des 12-17 ans : 30%, 50% 70%. Nous n'avons pas eu besoin de vérifier cette hypothèse, car pour une haute couverture vaccinale des adultes (90%), la vaccination des adolescents n'a aucune incidence sur la trajectoire hospitalière selon les propres résultats du rapport.
+- Vaccine adherence of 12-17 year olds: 30%, 50% 70%. We did not need to test this assumption, because for high adult vaccination coverage (90%), vaccination of adolescents has no impact on the hospital trajectory according to the report's own results.
 
--   Doses de vaccins distribués par jour : 500 000, 700 000 ou 800 000. Nous avons éliminé les scénarios à 800 000 doses/jour, trop éloignés de la réalité (voir graphique ci-dessous). Celui à 700 000 ne correspond qu'au début du mois d'août, mais nous avons fait le choix de le conserver.
+- Vaccine doses distributed per day: 500,000, 700,000, or 800,000. We have eliminated the 800,000 doses/day scenarios, which are too far from reality (see graph below). The 700,000 scenario only corresponds to the beginning of August, but we chose to keep it.
 
-Le second rapport fait uniquement des hypothèses sur la durée de passage en soins critiques (10, 14 ou 17 jours) et sur le nombre de doses de vaccin distribuées par jour (600 000, 700 000 800 000). Au vu des chiffre ci-dessous, nous avons exclus les scénarios à 700 000 et 800 000 doses/jour.
+The second report only makes assumptions about the length of time spent in critical care (10, 14 or 17 days) and the number of doses of vaccine distributed per day (600,000, 700,000, 800,000). Given the figures below, we have excluded the 700,000 and 800,000 doses/day scenarios.
 
 <center>
 
@@ -1031,7 +1031,7 @@ Le second rapport fait uniquement des hypothèses sur la durée de passage en so
 
 </details>
 
-## 7. Eté 2021, Freedom Day au Royaume-Uni
+## 7. Summer 2021, Freedom Day in the UK
 
 <details>
 
@@ -1041,9 +1041,9 @@ Le second rapport fait uniquement des hypothèses sur la durée de passage en so
 
 </summary>
 
-Le Royaume-Uni a été confronté en juillet à une situation similaire à la France : une augmentation des hospitalisations, accompagnée de scénarios anticipant une submersion de l'hôpital. Contrairement à la France, le Royaume-Uni n'a pas mis en place de pass sanitaire et a levé presque l'intégralité des mesures de contrôle. Nous détaillons cela dans la section suivante.
+In July, the United Kingdom faced a similar situation to France: an increase in hospital admissions, accompanied by scenarios anticipating hospital flooding. Unlike France, the UK did not implement a health pass and lifted almost all control measures. We detail this in the next section.
 
-Nous présentons une comparaison entre scénarios de modélisation et réalité dans le cas du "Freedom Day", jour de levée de la quasi-totalité des mesures restrictives au Royaume-Uni. Le 19 juillet, dans le cadre de son plan de sortie de crise, le gouvernement britannique a en effet décidé de [lever la plupart de ses mesures de restrictions](https://news.sky.com/story/covid-19-what-are-the-remaining-rules-in-england-after-freedom-day-12359221) (telles que les limitations de capacité dans les lieux accueillant du public, port du masque obligatoire ou encore limitations de déplacement).
+We present a comparison between modeling scenarios and reality in the case of "Freedom Day", the day on which almost all restrictive measures were lifted in the UK. On July 19, as part of its exit plan, the British government decided to [lift most of its restrictive measures](https://news.sky.com/story/covid-19-what-are-the-remaining-rules-in-england-after-freedom-day-12359221) (such as capacity limitations in places open to the public, compulsory wearing of masks or travel restrictions).
 
 </details>
 
@@ -1051,13 +1051,13 @@ Nous présentons une comparaison entre scénarios de modélisation et réalité 
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparison of scenarios to actual data**
 
 </summary>
 
-Les données présentées ci-dessous comparent la réalité des patients hospitalisés avec les différents scénarios de modélisations visant à prévoir l'impact de la levée des restrictions. Les données sont issues du [rapport](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1075065/S1301_SPI-M-O_Summary_Roadmap_second_Step_4.2_1_.pdf) du 7 juillet du SAGE (Scientific Advisory Group for Emergencies), et la mise en forme provient du site du [The Spectator](https://data.spectator.co.uk/category/sage-scenarios).
+The data presented below compares actual hospitalized patients with different modeling scenarios to predict the impact of lifting restrictions. The data are from the July 7 SAGE (Scientific Advisory Group for Emergencies) [report](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1075065/S1301_SPI-M-O_Summary_Roadmap_second_Step_4.2_1_.pdf), and the formatting is from [The Spectator](https://data.spectator.co.uk/category/sage-scenarios).
 
-Le pic réel se trouve sous le scénario le plus optimiste, les scénarios médians sont 2 à 3 fois supérieurs, et le scénario le plus pessimiste est plus de 5 fois supérieur.
+The actual peak is below the most optimistic scenario, the median scenarios are 2-3 times higher, and the most pessimistic scenario is more than 5 times higher.
 
 </details>
 
@@ -1071,19 +1071,19 @@ Le pic réel se trouve sous le scénario le plus optimiste, les scénarios médi
 
 <summary>
 
-**Impact politique et médiatique**
+**Political and media impact**
 
 </summary>
 
-Cette levée des restrictions avait été fermement critiquée par de nombreux scientifiques dans une lettre ouverte au prestigieux journal médical [The Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext), qui l'avait qualifiée de "dangereuse et prématurée". Cette lettre ouverte a été reprise par différents médias [britanniques](https://www.dailymail.co.uk/news/article-9766759/Experts-sign-letter-condemning-Government-s-dangerous-unethical-experiment.html) et [internationaux](https://edition.cnn.com/2021/07/18/uk/boris-johnson-covid-gamble-freedom-day-intl-gbr-cmd/index.html), qui s'appuyaient sur ces modélisations pour annoncer "une troisième vague importante d'hospitalisations et de décès" à la suite de la levée des restrictions, décrite comme une "expérience dangereuse sans éthique".
+This lifting of restrictions was strongly criticized by many scientists in an open letter to the prestigious medical journal [The Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext), who called it "dangerous and premature". This open letter was picked up by various [British](https://www.dailymail.co.uk/news/article-9766759/Experts-sign-letter-condemning-Government-s-dangerous-unethical-experiment.html) and [international](https://edition.cnn.com/2021/07/18/uk/boris-johnson-covid-gamble-freedom-day-intl-gbr-cmd/index.html) media outlets, which relied on these models to announce "a third major wave of hospitalizations and deaths" following the lifting of the restrictions, described as a "dangerous and unethical experiment".
 
-Le fait que les modélisations aient largement surestimées l'impact de la réouverture a été [décrit dans le journal scientifique Nature](https://www.nature.com/articles/d41586-021-02125-1) par un épidémiologiste renommé:
+The fact that the models greatly overestimated the impact of the reopening was [described in the scientific journal Nature](https://www.nature.com/articles/d41586-021-02125-1) by a renowned epidemiologist:
 
-> Personne ne comprend vraiment ce qu'il se passe.
+> No one really understands what's going on.
 
 </details>
 
-## 8. Automne-Hiver 2021, pré-Omicron
+## 8. Fall-Winter 2021, pre-Omicron
 
 <details>
 
@@ -1093,7 +1093,7 @@ Le fait que les modélisations aient largement surestimées l'impact de la réou
 
 </summary>
 
-Dans un contexte notamment marqué par la généralisation du pass sanitaire, l'Institut Pasteur a publié des modélisations sur la dynamique de l'épidémie pendant la transition automne-hiver. Bien que l'arrivée du variant Omicron ait rendu obsolète ces modélisations courant décembre, il reste une période de 2 mois sur laquelle elles peuvent être comparées à la réalité.
+In a context marked by the generalization of the health pass, the Pasteur Institute has published models on the dynamics of the epidemic during the autumn-winter transition. Although the arrival of the Omicron variant made these models obsolete in December, there is still a period of 2 months over which they can be compared with reality.
 
 </details>
 
@@ -1101,13 +1101,13 @@ Dans un contexte notamment marqué par la généralisation du pass sanitaire, l'
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparison of scenarios to actual data**.
 
 </summary>
 
-La plupart des scénarios se trouvent au niveau d'une circulation épidémique contenue, en-dessous des admissions hospitalières réelles d'un facteur 4 à 6.
+Most scenarios are at the level of a contained epidemic circulation, below actual hospital admissions by a factor of 4 to 6.
 
-Les scénarios plus proches de la réalité correspondent à un "relâchement des mesures/comportements de 40%", qui ramène au "niveau de contrôle mesuré en juin-juillet", couplé à une modulation défavorable du climat. Bien que les mesures de contrôle n'aient pas été relâchées au niveau de juin-juillet, quand il n'y avait pas de pass sanitaire, il nous est impossible de mesurer le "relâchement des comportements", et nous avons donc gardé ces scénarios.
+Scenarios closer to reality correspond to a "relaxation of measures/behaviors by 40%", which returns to the "control level measured in June-July", coupled with an unfavorable climate modulation. Although the control measures were not relaxed to the June-July level, when there was no health pass, it is impossible for us to measure the "relaxation of behaviors", so we kept these scenarios.
 
 </details>
 
@@ -1134,11 +1134,11 @@ scenario %>%
 
 <summary>
 
-**Impact politique et médiatique**
+**Political and media impact**
 
 </summary>
 
-Ces modélisations ont été [reprises](https://www.huffingtonpost.fr/entry/pass-sanitaire-modelisations-de-linstitut-pasteur-qui-guident-le-gouvernement_fr_615f1428e4b09f3389721226) par le Conseil Scientifique dans son rapport du [5 octobre 2021](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_5_octobre_2021.pdf). Il s'est appuyé dessus notamment pour recommander de maintenir le pass sanitaire pendant une période courant a minima jusqu'au 15 novembre 2021 (première prolongation du pass sanitaire). Elles ont été également reprises dans la [presse](https://www.francetvinfo.fr/sante/maladie/coronavirus/covid-19-en-france-l-institut-pasteur-juge-improbable-une-reprise-importante-de-l-epidemie-cet-hiver_4800973.html) nationale.
+These models were [taken up](https://www.huffingtonpost.fr/entry/pass-sanitaire-modelisations-de-linstitut-pasteur-qui-guident-le-gouvernement_fr_615f1428e4b09f3389721226) by the Scientific Council in its report of [5 October 2021](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_5_octobre_2021.pdf). It recommended that the health pass be maintained for a period running at least until November 15, 2021 (first extension of the health pass). They were also reported in the national [press](https://www.francetvinfo.fr/sante/maladie/coronavirus/covid-19-en-france-l-institut-pasteur-juge-improbable-une-reprise-importante-de-l-epidemie-cet-hiver_4800973.html).
 
 </details>
 
@@ -1146,23 +1146,23 @@ Ces modélisations ont été [reprises](https://www.huffingtonpost.fr/entry/pass
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion of scenario assumptions (technical)**
 
 </summary>
 
-Nos courbes sont issues de la figure 7.
+Our curves are derived from Figure 7.
 
--   Des comportements/mesures réduisant les transmissions au niveau de juin/juillet avant le pass sanitaire, au niveau actuel (-40% par rapport à juin/juillet), où à un niveau intermédiaire (-20%)
+- Behaviors/measures reducing transmissions to the level of June/July before the sanitary pass, to the current level (-40% compared to June/July), or to an intermediate level (-20%)
 
--   Une modulation du climat qui augmente les contaminations de 33% (estimé), 20% ou 40%
+- A modulation of the climate that increases contaminations by 33% (estimated), 20% or 40%.
 
--   Un relâchement des mesures/comportements au 15 octobre ou au 15 novembre. Les dates du 15 décembre et 15 janvier étaient également étudiées mais ne nous intéressent pas car hors de notre période d'étude
+- A relaxation of measures/behaviors on October 15 or November 15. The dates of December 15 and January 15 were also studied but are not of interest to us because they are outside our study period
 
--   3 variantes d'hypothèses sur l'efficacité vaccinale contre l'hospitalisation et l'infection respectivement de 95% et 60% (référence), 90% et 60%, et 95% et 80%.
+- 3 hypothesis variants on vaccine efficacy against hospitalization and infection respectively of 95% and 60% (reference), 90% and 60%, and 95% and 80%.
 
 </details>
 
-## 9. Décembre 2021, seconde vague delta
+## 9. December 2021, second delta wave
 
 <details>
 
@@ -1172,13 +1172,13 @@ Nos courbes sont issues de la figure 7.
 
 </summary>
 
-Dans un contexte de seconde vague delta, l'Institut Pasteur a produit 2 rapports le [29 novembre](https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_diminution_de_limmunit%C3%A9_et_rappel_20211129.pdf) et le [2 décembre 2021](https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_Complement_rapport_rappel_20211202.pdf) avec des scénarios couvrant l'hiver et le printemps 2022. Malheureusement l'émergence du variant omicron 2 semaines plus tard rend caduques les hypothèses et ne permet pas une comparaison à la réalité.
+In the context of a second delta wave, the Pasteur Institute produced 2 reports on [November 29](https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_diminution_de_limmunit%C3%A9_et_rappel_20211129.pdf) and [December 2, 2021](https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_Complement_rapport_rappel_20211202.pdf) with scenarios covering winter and spring 2022. Unfortunately, the emergence of the omicron variant 2 weeks later renders the hypotheses obsolete and does not allow a comparison with reality.
 
-Une critique souvent apportée à la comparaison des données réelles aux "scénarios" telle que réalisée ci-dessus est que ces derniers ne constituent pas des "prédictions", et servent simplement à donner une idée des grandes tendances et de l'impact de différentes mesures.
+A criticism often made of the comparison of real data to "scenarios" as performed above is that the latter are not "predictions", and simply serve to give an idea of the major trends and impact of different measures.
 
-Néanmoins, au-delà des scénarios présentés dans ses rapports, l'Institut Pasteur publié également des "Projection à court terme des besoins hospitaliers" sur [cette page](https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/) , régulièrement mise à jour. Ici, le but est bien de prévoir correctement le nombre de malades, l'Institut précisant que "l'erreur relative pour les projections du nombre de lits de soins critiques au niveau national est de 11% à 14 jours."
+Nevertheless, beyond the scenarios presented in its reports, the Institut Pasteur also publishes "Short-term projections of hospital needs" on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/) , which are regularly updated. Here, the goal is indeed to correctly forecast the number of patients, the Institute stating that "the relative error for projections of the number of critical care beds at the national level is 11% at 14 days."
 
-Nous comparons ici la projection du modèle 2 semaines avant le pic de la seconde vague delta de mi-décembre 2021. Ce pic est intervenu juste avant l'émergence du variant omicron, qui a changé la donne dans les semaines qui ont suivi.
+Here we compare the model projection 2 weeks before the peak of the second delta wave in mid-December 2021. This peak occurred just before the emergence of the omicron variant, which changed the game in the weeks that followed.
 
 </details>
 
@@ -1186,21 +1186,21 @@ Nous comparons ici la projection du modèle 2 semaines avant le pic de la second
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparison of scenarios to actual data**.
 
 </summary>
 
-Au moment du pic du variant delta, la projection du modèle correspond à une surestimation 2 semaines plus tard de 30% pour les lits de soins critiques, et d'environ 40% pour les autres indicateurs.
+At the time of the peak of the delta variant, the model projection corresponds to an overestimation 2 weeks later of 30% for critical care beds, and of about 40% for the other indicators.
 
-Malgré une précision moyenne de 10% du modèle, au moment du pic l'erreur réelle aura été bien plus élevée. Nous aurions souhaité comparer les projections du modèle aux autres pics (février 2021, avril 2021, août 2021) afin d'évaluer s'il s'agissait d'une erreur ponctuelle ou d'un biais systématique sur les pics. Une telle évaluation est importante car c'est l'anticipation d'un pic hospitalier qui conditionne la réponse politique.
+Despite an average model accuracy of 10%, at the time of the peak the actual error will have been much higher. We would have liked to compare the model projections to the other peaks (February 2021, April 2021, August 2021) in order to assess whether this was a one-time error or a systematic bias on the peaks. Such an evaluation is important because it is the anticipation of a hospital peak that conditions the policy response.
 
-Malheureusement la mise à jour régulière des projections sur la [page présentant les résultats](https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/) écrase les projections publiées précédemment, et nous n'avons pas pu effectuer cette évaluation systématique. Une conservation des résultats précédents en open data aiderait une telle démarche et une appropriation par les citoyens.
+Unfortunately, the regular updating of projections on the [page presenting the results](https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/) overwrites previously published projections, and we were unable to make this systematic assessment. Keeping previous results in open data would help such an approach and ownership by citizens.
 
 </details>
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Lits de soins critiques
+#### ICU Beds
 
 ```{r 2021-12-06_ICU_bed Pasteur}
 #Lits en soins critiques
@@ -1220,7 +1220,7 @@ ggplot(data = scenario, aes(x = date)) +
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Lits d'hôpital
+#### Hospital Beds
 
 ```{r 2021-12-06_hosp_bed Pasteur}
 #Lits l'hopital
@@ -1240,7 +1240,7 @@ ggplot(data = scenario, aes(x = date)) +
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Admissions en soins critiques
+#### ICU Admissions
 
 ```{r 2021-12-06_ICU_adm Pasteur}
 #Admissions en soins critiques
@@ -1260,7 +1260,7 @@ ggplot(data = scenario, aes(x = date)) +
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Admissions à l'hôpital
+#### Hospital Admissions
 
 ```{r 2021-12-06_hosp_adm Pasteur}
 #Admissions journalières à l'hopital
@@ -1286,15 +1286,15 @@ ggplot(data = scenario, aes(x = date)) +
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion of scenario assumptions (technical)**
 
 </summary>
 
-Il n'y pas de respect des hypothèses à vérifier pour ces projections. L'horizon de 2 semaines est trop court pour qu'une mesure mise en place après publication viennent modifier la trajectoire épidémique. En effet, comme le rappelle le [rapport du conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf), "les premiers effets des mesures adoptées [...] ne peuvent apparaître qu'après deux à trois semaines".
+There is no compliance with the assumptions to be checked for these projections. The two-week horizon is too short for any measure implemented after publication to modify the epidemic trajectory. Indeed, as the [Scientific Council Report](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) reminds us, "the first effects of the measures adopted [...] can only appear after two to three weeks".
 
 </details>
 
-## 10. Janvier 2022, variant Omicron
+## 10. January 2022, Omicron variant
 
 <details>
 
@@ -1304,11 +1304,11 @@ Il n'y pas de respect des hypothèses à vérifier pour ces projections. L'horiz
 
 </summary>
 
-Suite à l'apparition du variant Omicron, l'Institut Pasteur a publié un [premier rapport le 27 décembre 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Impact_dOmicron_sur_lepidemie_francaise_20211227.pdf), présentant plus d'une centaine de scénarios. En effet, il y est précisé qu'"étant donné les incertitudes [...], il n'est pas possible de quantifier précisément l'impact qu'aura la vague Omicron". Nous n'avons donc pas analysé ce rapport.
+Following the appearance of the Omicron variant, the Pasteur Institute published a [first report on December 27, 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Impact_dOmicron_sur_lepidemie_francaise_20211227.pdf), presenting more than a hundred scenarios. Indeed, it is specified that "given the uncertainties [...], it is not possible to quantify precisely the impact that the Omicron wave will have". Therefore, we did not analyze this report.
 
-Le [rapport suivant du 7 janvier](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Complement_Analyse_Impact_Omicron_20220107_corrige.pdf) reprend pour base le précédent à la lumière des nouvelles données, et exclut les scénarios ne collant aux propriétés d'Omicron, rendant possible l'analyse des résultats.
+The [following report of January 7](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Complement_Analyse_Impact_Omicron_20220107_corrige.pdf) takes as a basis the previous one in the light of the new data, and excludes the scenarios that do not fit the Omicron properties, making it possible to analyze the results.
 
-Nous analysons également un [rapport publié le 15 février](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Comparaison_Observations_projections_Omicron_20220215.pdf), qui constitue une auto-évaluation comparant ce qui a été "prédit" (terme utilisé par le rapport) à ce qui s'est réellement passé.
+We also analyze a [report published on February 15](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Comparaison_Observations_projections_Omicron_20220215.pdf), which is a self-assessment comparing what was "predicted" (the term used by the report) with what actually happened.
 
 </details>
 
@@ -1316,21 +1316,21 @@ Nous analysons également un [rapport publié le 15 février](https://modelisati
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparison of scenarios to actual data**
 
 </summary>
 
-Le rapport distinguait des scénarios "probables" (en trais pleins) de scénarios "moins probables" (en pointillés). Il distinguait également une hypothèses d'efficacité à 6 mois de la dose de rappel contre les infections de 85% ou 60%.
+The report distinguished "likely" scenarios (solid lines) from "less likely" scenarios (dotted lines). It also distinguished between a hypothesis of efficacy at 6 months of the booster dose against infections of 85% or 60%.
 
-La réalité est une efficacité initiale de 50% puis nulle au-delà de 3 mois (voir paragraphe "Auto-évaluation de l'Institut Pasteur"), excluant a minima le scénario 85%. Mais l'Institut Pasteur l'utilisant pour affirmer dans son rapport rétrospectif que "les dynamiques prédites et observées des admissions quotidiennes sont proches", nous avons fait le choix de le représenter.
+The reality is an initial efficacy of 50% and then zero after 3 months (see paragraph "Institut Pasteur's self-evaluation"), excluding at least the 85% scenario. However, since the Institut Pasteur uses it to affirm in its retrospective report that "the predicted and observed dynamics of daily admissions are close", we have chosen to represent it.
 
 </details>
 
-<center>**Scénarios probables**</center>
+<center>**Likely Scenarios**</center>
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Hypothèse (moins) fausse : efficacité vaccinale 60%
+#### (Less) false assumption: 60% vaccine effectiveness
 
 ```{r 2022-01-07_probable_high_VE_Pasteur}
 #low VE
@@ -1353,7 +1353,7 @@ scenario %>%
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Hypothèse fausse : efficacité vaccinale 85%
+#### False assumption: 85% vaccine effectiveness
 
 ```{r 2022-01-07_probable_low_VE_Pasteur}
 #high VE
@@ -1378,11 +1378,11 @@ scenario %>%
 
 ###
 
-<center>**Scénarios moins probables**</center>
+<center>**Less likely scenarios**</center>
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Hypothèse (moins) fausse : efficacité vaccinale 60%
+#### (Less) false assumption: 60% vaccine effectiveness
 
 ```{r 2022-01-07_not_probable_high_VE_Pasteur}
 #high VE all
@@ -1406,7 +1406,7 @@ scenario %>%
 
 ```
 
-#### Hypothèse fausse : efficacité vaccinale 85%
+#### False assumption: 85% vaccine effectiveness
 
 ```{r 2022-01-07_not_probable_low_VE_Pasteur}
 #high VE all
@@ -1436,11 +1436,11 @@ scenario %>%
 
 <summary>
 
-**Impact politique et médiatique**
+**Political and media impact**
 
 </summary>
 
-Le rapport d'auto-évaluation de l'Institut Pasteur a été repris dans [certains articles de presse](https://www.huffingtonpost.fr/entry/institut-pasteur-avait-vu-juste-pour-la-5e-vague-voici-ses-predictions-sur-la-fin-de-lhiver_fr_620d0102e4b05706db70a281) déclarant que "l'institut Pasteur avait presque tout bon sur l'impact d'Omicron". Nous détaillons dans le paragraphe suivant les raisons qui nous font penser que cette affirmation est à prendre avec des pincettes.
+The Institut Pasteur's self-evaluation report has been quoted in [some press articles](https://www.huffingtonpost.fr/entry/institut-pasteur-avait-vu-juste-pour-la-5e-vague-voici-ses-predictions-sur-la-fin-de-lhiver_fr_620d0102e4b05706db70a281) as saying that "Institut Pasteur was almost right about the impact of Omicron". We detail in the following paragraph the reasons why we think this statement should be taken with caution.
 
 </details>
 
@@ -1448,11 +1448,11 @@ Le rapport d'auto-évaluation de l'Institut Pasteur a été repris dans [certain
 
 <summary>
 
-**Auto-évaluation de l'Institut Pasteur et discussion des hypothèses**
+**Institut Pasteur self-assessment and discussion of hypotheses**
 
 </summary>
 
-Plusieurs points soulèvent question dans l'auto-évaluation menée par l'Institut Pasteur présentée ci-dessous. On notera au passage que notre propre rétrospective est cohérente avec la figure présentée par l'Institut.
+Several points raise questions in the self-evaluation conducted by the Institut Pasteur presented below. We note in passing that our own retrospective is consistent with the figure presented by the Institute.
 
 <center>
 
@@ -1460,11 +1460,11 @@ Plusieurs points soulèvent question dans l'auto-évaluation menée par l'Instit
 
 </center>
 
-La plus évidente est l'absence totale d'allusion à l'efficacité vaccinale et le choix de ne représenter que les courbes illustrant une efficacité vaccinale de 85%, contrairement à nos graphiques. Pourtant une [note officielle de la DREES](https://drees.solidarites-sante.gouv.fr/communique-de-presse/au-dela-de-trois-mois-la-dose-de-rappel-ne-semble-plus-proteger-contre-les) titre explicitement :
+The most obvious one is the total absence of any reference to vaccine efficacy and the choice to represent only the curves illustrating a vaccine efficacy of 85%, contrary to our graphs. However, an [official note from DREES](https://drees.solidarites-sante.gouv.fr/communique-de-presse/au-dela-de-trois-mois-la-dose-de-rappel-ne-semble-plus-proteger-contre-les) explicitly states:
 
-> *"Au-delà de trois mois, la dose de rappel ne semble plus protéger contre les infections au Covid-19"*
+> *"Beyond three months, the booster dose no longer seems to protect against Covid-19 infections "*
 
-Au moment de la publication du rapport, les [données de surveillance britanniques](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1052353/Vaccine_surveillance_report_-_week_5.pdf)indiquaient déjà une efficacité vaccinale de seulement 40% au bout de 10 semaines, bien loin des 80%. [Leurs données plus récentes](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1083443/Vaccine-surveillance-report-week-24.pdf) (ci-dessous) confirment une efficacité initiale de 45% puis presque nulle au-delà de 3 mois. L'équipe de Pasteur pouvait-elle ignorer ces éléments au moment de son auto-évaluation ?
+At the time of publication of the report, the [British surveillance data](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1052353/Vaccine_surveillance_report_-_week_5.pdf) already indicated a vaccine efficacy of only 50% after 10 weeks, far from 85%. [Their more recent data](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1083443/Vaccine-surveillance-report-week-24.pdf) (below) confirm an initial efficacy of 45% and then almost zero after 3 months. Could Pasteur's team have been unaware of these elements at the time of their self-evaluation?
 
 <center>
 
@@ -1472,12 +1472,12 @@ Au moment de la publication du rapport, les [données de surveillance britanniqu
 
 </center>
 
-Par ailleurs, contrairement à nous, l'auto-évaluation ne présente pas les scénarios "moins probables". Se pose alors la question des bonnes pratiques d'évaluation rétrospective, à définir en amont. L'équipe aurait-elle écarté ces scénario si la réalité les avait suivi ?
+Moreover, unlike us, the self-evaluation does not present the "less likely" scenarios. This raises the question of good practice in retrospective evaluation, to be defined upstream. Would the team have discarded these scenarios if reality had followed them?
 
-Nous notons que si l'équipe insiste régulièrement sur le fait que ["les scénarios ne sont pas des prédictions"](https://www.liberation.fr/sciences/2020/11/03/simon-cauchemez-le-pic-de-cette-vague-en-reanimation-devrait-arriver-mi-novembre_1804291/), l'auto-évaluation est moins prudente, le terme "prédit" revenant plusieurs fois dans le rapport, par exemple "les dynamiques prédites et observées des admissions quotidiennes sont également proches."
+We note that while the team regularly insists that ["the scenarios are not predictions"](https://www.liberation.fr/sciences/2020/11/03/simon-cauchemez-le-pic-de-cette-vague-en-reanimation-devrait-arriver-mi-novembre_1804291/), the self-assessment is less cautious, with the term "predicted" recurring several times in the report, e.g., "the predicted and observed dynamics of daily admissions are also close."
 
-Nous rappelons que la vérification de l'adéquation des hypothèses est importante, car comme le rappelle le début de chacun des rapport de l'Institut Pasteur :
+We recall that testing the adequacy of assumptions is important, because as the beginning of each of the Institut Pasteur reports reminds us:
 
-> *"Les trajectoires décrites dépendent des hypothèses faites; si les hypothèses ne se réalisent pas, la dynamique observée pourra être différente des projections."*
+> The trajectories described depend on the assumptions made; if the assumptions are not realized, the observed dynamics may differ from the projections.
 
 </details>

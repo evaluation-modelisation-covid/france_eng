@@ -2,52 +2,52 @@
 title: ""
 ---
 
-# Méthodologie
+# Méthodology
 
-Les courbes présentées sur le site sont issues des scénarios de modélisations ayant impacté les politiques publiques mises en place en France. Elles ont principalement été produites par l'Institut Pasteur et l'Inserm. Les données n'étant à notre connaissance pas disponibles en accès libre, nous les avons extraites à partir des courbes des rapport en utilisant [WebPlotDigitilizer](https://automeris.io/WebPlotDigitizer/).
+The curves presented on the site are derived from modeling scenarios that have impacted public policies implemented in France. They were mainly produced by the Institut Pasteur and Inserm. As the data are not available in free access, we have extracted them from the report curves using [WebPlotDigitilizer](https://automeris.io/WebPlotDigitizer/).
 
-Pour permettre une évaluation appropriée des scénarios de modélisation, seuls les scénarios dont les hypothèses sont vérifiées ont été retenus, notamment les hyopthèses portant sur les mesures mises en place. Afin de ne pas introduire de biais (par exemple ne prendre que les scénarios qui surestimaient la réalité, ou l'inverse), nous avons étudié les scénarios de manière exhaustive. Nous avons analysé :
+To allow for a proper evaluation of the modeling scenarios, only those scenarios with verified assumptions were retained, including the hyoptheses regarding the measures implemented. In order not to introduce bias (e.g., taking only those scenarios that overestimated reality, or the reverse), we studied the scenarios exhaustively. We analyzed:
 
-1.  toutes les modélisations issues des rapports de l'Institut Pasteur, publiés sur leur [page web](https://modelisation-covid19.pasteur.fr/)
-2.  les modélisations cités dans les [rapports du Conseil Scientifique](https://solidarites-sante.gouv.fr/actualites/presse/dossiers-de-presse/article/conseil-scientifique-covid-19), ce qui nous à notamment mené à identifier des scénarios de Inserm pour janvier-février 2021
-3.  les [modélisations de l'Imperial College pour le 1er confinement](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/), citée par le Conseil Scientifique et a eu un impact majeur sur les politiques publiques françaises
-4.  une recherche google rétrospective avec dates délimitées pour chaque mois et les mots-clés "INSERM", "Pasteur", "modélisation", "scénario". Cela a permis d'identifier des scénarios non officiellement publiés mais néanmoins cités par la presse :[Institut Pasteur pour le 2ème confinement](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656)de novembre 2020, et Institut Pasteur pour le [déconfinement de l'Ile-de-France en mai 2020.](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309)
+1. all the models from the Institut Pasteur reports, published on their [web page](https://modelisation-covid19.pasteur.fr/)
+2. the models quoted in the [Scientific Council reports](https://solidarites-sante.gouv.fr/actualites/presse/dossiers-de-presse/article/conseil-scientifique-covid-19), which led us to identify Inserm scenarios for January-February 2021
+3. the [Imperial College modelling for the 1st containment](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/), cited by the Scientific Council and had a major impact on French public policies
+4. a retrospective google search with delimited dates for each month and the keywords "INSERM", "Pasteur", "modeling", "scenario". This allowed to identify scenarios not officially published but nevertheless cited by the press: [Institut Pasteur for the 2nd containment](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656)of November 2020, and Institut Pasteur for the [decontainment of the Ile-de-France in May 2020.](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309)
 
-Enfin, nous nous concentrons sur les indicateurs hospitaliers, et excluons de notre analyse le nombre de cas. Cette exclusion est justifiée selon nous par deux raisons. La première est que le nombre de cas est un indicateur moins objectif que le nombre de lits occupés, car il dépend notamment de la propension des français à se faire tester, qui varie au cours du temps. Deuxièmement, le nombre de cas ne dit pas grand chose sur la dangerosité des infections. A partir de janvier 2022, le nombre de cas se situe à un niveau 10 fois supérieur aux chiffres pré-Omicron, sans que la pression hospitalière ne suive pour autant.
+Finally, we focus on hospital indicators, and exclude the number of cases from our analysis. We believe that there are two reasons for this exclusion. The first is that the number of cases is a less objective indicator than the number of occupied beds, because it depends in particular on the propensity of the French to be tested, which varies over time. Secondly, the number of cases does not say much about the danger of infections. From January 2022 onwards, the number of cases is 10 times higher than the pre-Omicron figures, without the hospital pressure following suit.
 
-# Méthodologie détaillée
+# Comprehensive list of reports
 
-La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non dans l'analyse du site (avec la raison) est disponible ci-dessous, ainsi que les liens renvoyant vers les rapports en question.
+The complete list of modeling scenarios, and whether or not they were included in the site analysis (with rationale) is available below, along with links to the reports in question.
 
 <details>
 
 <summary>
 
-**Modélisations de l'Institut Pasteur**
+**Institut Pasteur Modelling**
 
 </summary>
 
--   [29 avril 2020](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309) : inclus (non officiellement publié mais retranscrit par la presse)
--   [25 septembre 2020](https://www.sdbio.eu/images/acymailing/Simulations%20Institut%20Pasteur%2025%2009%202020.pdf) : exclu (des mesures ont été prises en septembre, les scénarios ne sont donc plus comparable avec la réalité)
--   [30 octobre 2020](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656) : inclus (ce sont les modélisations du 2ème confinement, non publiées sur le site de l'Institut Pasteur mais retranscrites par la presse)
--   [8 février 2021](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf) : inclus
--   [23 février 2021](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525) : inclus
--   [29 mars 2021](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.9.2100133) : pas de scénario dans le rapport
--   [6 avril 2021](https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(21)00281-9/fulltext) : exclu (les courbes présentées sont un contrefactuel de l'évolution épidémique en l'absence de vaccination)
--   [26 avril 2021](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf) : inclus
--   [21 mai 2021](https://modelisation-covid19.pasteur.fr/loosening/Mise_a_jour_scenarios_de_levee_des_mesures_de_freinage_20210521.pdf) : inclus. Nous n'avons pas eu besoin d'analyser nous- mêmes, la comparaison étant déjà menée de manière informelle sur twitter par Simon Cauchemez en charge de l'équipe modélisation de l'Institut Pasteur
--   [9 juillet 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_dynamique_du_variant_Delta_en_France_metropolitaine_20210709.pdf) : exclu (la mise en place du pass sanitaire n'était pas incluse dans les hypothèses de modélisation, les scénarios ne sont donc plus comparable avec la réalité)
--   [26 juillet 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Acceleration_vaccination_et_Delta_20210726.pdf) : inclus (les scénarios prennent en compte la mise en place du pass)
--   [5 août 2021](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Dynamiques_regionales_des_hospitalisations_20210805.pdf) : inclus (les scénarios prennent en compte la mise en place du pass sanitaire)
--   [6 septembre 2021](https://hal-pasteur.archives-ouvertes.fr/pasteur-03272638v2) : pas de scénarios dans le rapport
--   [4 octobre 2021](https://modelisation-covid19.pasteur.fr/scenarios/InstitutPasteur_scenariosCOVID19AutomneHiver_2021.pdf) : inclus
--   [29 novembre 2021](https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_diminution_de_limmunit%C3%A9_et_rappel_20211129.pdf) : exclu (impact du variant Omicron 2 semaines plus tard, qui n'était pas pris en compte dans les modélisations). Nous avons tout de même pu comparer les projections à court terme durant la courte fenêtre de 2 semaines avant que le variant Omicron ne vienne fausser les résultats.
--   [2 décembre 2021](https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_Complement_rapport_rappel_20211202.pdf) : exclu (impact du variant Omicron 2 semaines plus tard, qui n'était pas pris en compte dans les modélisations). Nous avons tout de même pu comparer les projections à court terme durant la courte fenêtre de 2 semaines avant que le variant Omicron vienne fausser les résultats.
--   [27 décembre 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Impact_dOmicron_sur_lepidemie_francaise_20211227.pdf) : inclus par le biais du rapport du 7 janvier. En effet il est précisé qu'"étant donné les incertitudes [...], il n'est pas possible de quantifier précisément l'impact qu'aura la vague Omicron". Une centaine de scénarios sont alors produits. Le rapport suivant du 7 janvier, que nous avons analysé, reprend pour base ce rapport après avoir exclu les scénarios ne collant pas aux propriétés d'Omicron.
--   [7 janvier 2022](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Complement_Analyse_Impact_Omicron_20220107_corrige.pdf) : inclus
--   [15 février 2022](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Comparaison_Observations_projections_Omicron_20220215.pdf) : ce rapport ne produit pas de scénario mais une rétrospective portant sur le rapport précédent du 7 janvier. Nous en discutons dans notre analyse de ce dernier rapport.
--   [21 février 2022](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Impact_BA_2_epidemie_francaise_20220221.pdf) : exclu. Ne se concentre que sur le nombre de cas, ce qui est un critère excluant de notre méthodologie comme expliqué plus haut.
--   [10 mars 2022](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_impact_BA2_relachement_mesures_20220310.pdf) : exclu. Ne se concentre que sur le nombre de cas, ce qui est un critère excluant de notre méthodologie comme expliqué plus haut.
+-   [April 29, 2020](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309) : included (not officially published but transcribed by the press)
+-   [September 25, 2020](https://www.sdbio.eu/images/acymailing/Simulations%20Institut%20Pasteur%2025%2009%202020.pdf) : excluded (measures were taken in September, so the scenarios are no longer comparable with reality)
+-   [Octobre 30, 2020](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656) : included (these are the models of the 2nd containment, not published on the Institut Pasteur website but transcribed by the press)
+-   [February 8, 2021](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf) : included
+-   [February 23, 2021](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525) : included
+-   [March 29, 2021](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.9.2100133) : no scenarios in the report
+-   [April 6, 2021](https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(21)00281-9/fulltext) : excluded (the curves presented are a counterfactual of the epidemic evolution in the absence of vaccination)
+-   [April 26, 2021](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf) : included
+-   [May 21, 2021](https://modelisation-covid19.pasteur.fr/loosening/Mise_a_jour_scenarios_de_levee_des_mesures_de_freinage_20210521.pdf) : included. We did not need to analyze ourselves, the comparison being already carried out in an informal way on twitter by Simon Cauchemez in charge of the modeling team of the Institut Pasteur
+-   [July 9, 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_dynamique_du_variant_Delta_en_France_metropolitaine_20210709.pdf) : excluded (the implementation of the health pass was not included in the modeling assumptions, so the scenarios are no longer comparable with reality)
+-   [July 26, 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Acceleration_vaccination_et_Delta_20210726.pdf) : included (the scenarios take into account the implementation of the sanitary pass)
+-   [August 5, 2021](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Dynamiques_regionales_des_hospitalisations_20210805.pdf) : included (the scenarios take into account the implementation of the health pass)
+-   [September 6, 2021](https://hal-pasteur.archives-ouvertes.fr/pasteur-03272638v2) : no scenarios in the report
+-   [October 4, 2021](https://modelisation-covid19.pasteur.fr/scenarios/InstitutPasteur_scenariosCOVID19AutomneHiver_2021.pdf) : included
+-   [November 29, 2021](https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_diminution_de_limmunit%C3%A9_et_rappel_20211129.pdf) : excluded (impact of the Omicron variant 2 weeks later, which was not included in the models). We were still able to compare short-term projections during the short 2-week window before the Omicron variant distorted the results.
+-   [December 2, 2021](https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_Complement_rapport_rappel_20211202.pdf) : excluded (impact of the Omicron variant 2 weeks later, which was not included in the models). We were still able to compare short-term projections during the short 2-week window before the Omicron variant distorted the results.
+-   [Decemeber 27, 2021](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Impact_dOmicron_sur_lepidemie_francaise_20211227.pdf) : included through the report of January 7. Indeed, it is specified that "given the uncertainties [...], it is not possible to quantify precisely the impact that the Omicron wave will have". About a hundred scenarios were then produced. The following report of January 7, which we have analyzed, uses this report as a basis, after excluding the scenarios that do not fit the properties of Omicron.
+-   [January 7, 2022](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Complement_Analyse_Impact_Omicron_20220107_corrige.pdf) : included
+-   [February 15, 2022](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Comparaison_Observations_projections_Omicron_20220215.pdf) : This report does not produce a scenario but a retrospective on the previous report of January 7. We discuss this in our analysis of the latter report.
+-   [February 21, 2022](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Impact_BA_2_epidemie_francaise_20220221.pdf) : excluded. Focuses only on the number of cases, which is an exclusionary criterion in our methodology as explained above.
+-   [March 10, 2022](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_impact_BA2_relachement_mesures_20220310.pdf) : excluded. Focuses only on the number of cases, which is an exclusionary criterion in our methodology as explained above.
 
 </details>
 
@@ -55,11 +55,11 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 
 <summary>
 
-**Modélisations de l'INSERM**
+**INSERM Modelling**
 
 </summary>
 
--   modélisations de janvier-février 2021: inclues car apparaissant dans le [rapport du Conseil Scientifique du 29 janvier 2021](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) suggérant l'instauration d'un confinement strict. Elles ont également été diffusées dans la presse. Ces modélisations sont apparues dans les rapports Inserm des [16 janvier 2021](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf), [2 février 2021](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf) et [14 février 2021](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf).
+-   January-February 2021 models: included because they appear in the [report of the Scientific Council of January 29, 2021](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) suggesting the establishment of a strict confinement. They have also been published in the press. These models appeared in the Inserm reports of [January 16, 2021](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf), [February 2, 2021](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf) and [February 14, 2021](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf).
 
 </details>
 
@@ -67,10 +67,10 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 
 <summary>
 
-**Modélisations de l'Imperial College**
+**Imperial College Modelling**
 
 </summary>
 
--   [modélisations du rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/), et notamment son [appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx): inclues car cités comme argument majeur en faveur du confinement dans le [rapport du Conseil Scientifique du 12 mars 2020.](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf)Il a aussi été cité par de nombreux médias comme ayant été un argument décivif pour trancher en faveur du confinement, par exemple dans [Le Monde](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html) ou dans [Libération](https://www.liberation.fr/evenements-libe/2020/03/16/l-urgence-eviter-la-saturation-des-services-de-sante_1781988/).
+-   [modelling of report 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/), and in particular its [appendix](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx): included as a major argument in favor of containment in the [report of the Scientific Council of March 12, 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf). It has also been cited by many media as having been a decisive argument in favor of containment, e.g. in [Le Monde](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html) or in [Libération](https://www.liberation.fr/evenements-libe/2020/03/16/l-urgence-eviter-la-saturation-des-services-de-sante_1781988/)
 
 </details>
