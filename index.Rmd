@@ -204,19 +204,19 @@ The third figure shows the different Imperial College scenarios for mortality in
 #### ICU peak
 
 ```{r Sweden_Imperial_ICU_peak, echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/Imperial_Sweden/Sweden_icu.svg")
+knitr::include_graphics("images/Imperial_Sweden/Sweden_icu.png")
 ```
 
-#### Hospital peak
+#### Hospital peakr
 
 ```{r Sweden_Imperial_hosp_peak, echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/Imperial_Sweden/Sweden_hospital.svg")
+knitr::include_graphics("images/Imperial_Sweden/Sweden_hospital.png")
 ```
 
 #### Deaths
 
 ```{r Sweden_Imperial_deaths, echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/Imperial_Sweden/Sweden_deaths.svg")
+knitr::include_graphics("images/Imperial_Sweden/Sweden_deaths.png")
 ```
 
 ###
@@ -309,13 +309,13 @@ scenario %>%
   ggplot(aes(date, value, group=scenarios, color="scénarios")) + geom_smooth(se=F) + 
   geom_line(data= true_data_beds_hosp_rea_IDF, 
             aes(x=date, y=rea, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2020-03-27"), y = 500, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2020-03-27"), y = 500, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") +
-  annotate('text', x = as.Date("2020-06-01"), y = 1500, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2020-06-01"), y = 1500, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2020-03-19"), date("2020-06-28")) + g_theme +
-  labs(title = "Lits de réanimation en Ile-de-France",
-       subtitle = "scénarios non publiés de l'Institut Pasteur, retranscrit dans les Echos \n",
+  labs(title = "Intensive Care Unit Beds, Ile-de-France Regions",
+       subtitle = "unpublished scenarios from Pasteur Institute, reported in Les Echos \n",
        caption = "\ntwitter : twitter : @Covid_Scenarios")
 ```
 
@@ -396,13 +396,13 @@ scenario %>%
   ggplot(aes(date, value-200, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
   geom_line(data= true_data_beds_hosp_rea, 
             aes(x=date, y=rea, color = "réalité", group="true data"), size = 1) +
-  annotate('text', x = as.Date("2020-10-18"), y = 1400, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2020-10-18"), y = 1400, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2020-11-10"), y = 7000, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2020-11-10"), y = 7000, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") + 
   xlim(as.Date("2020-10-15"), as.Date("2020-12-10")) + g_theme  +
-  labs(title = "Lits de réanimation occupés",
-       subtitle = "scénarios de l'Institut Pasteur du 30 octobre 2020\nnon publié mais retranscrit dans les Echos",
+  labs(title = "Intensive Care Unit Beds",
+       subtitle = "Pasteur Institute scenarios of October 30, 2020\nunpublished but reported in Les Echos",
        caption = "\ntwitter : twitter : @Covid_Scenarios")
 ```
 
@@ -417,13 +417,13 @@ scenario %>%
   ggplot(aes(date, value-30, group=pasteur, color="scénarios")) + geom_smooth(se=F) +
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_rea_center, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2020-10-18"), y = 170, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2020-10-18"), y = 170, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2020-10-28"), y = 500, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2020-10-28"), y = 500, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") + 
   xlim(as.Date("2020-10-15"), as.Date("2020-12-10")) + g_theme +
-  labs(title = "Admissions en réanimations",
-       subtitle = "scénarios de l'Institut Pasteur du 30 octobre 2020\nnon publié mais retranscrit dans les Echos",
+  labs(title = "Intensive Care Unit Admissions",
+       subtitle = "Pasteur Institute scenarios of October 30, 2020\nunpublished but reported in Les Echos",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -497,19 +497,19 @@ scenario %>%
   ggplot(aes(date, value+1700, group=scenario, color="scénarios")) + geom_smooth(se=F) +
   geom_line(data= true_data_new_hosp_rea_weekly, 
             aes(x=date, y=new_hosp_week, color = "réalité", group="true data"), size = 1) +
-  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-02-01"), y = 25000, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-02-01"), y = 25000, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-01"), date("2021-03-27")) + ylim(0,37000) + g_theme +
-  labs(title = "Nombre hebdomadaire d'admission à l'hôpital",
-       subtitle = "scénarios publiés par l'INSERM le 16 janvier 2021\n",
+  labs(title = "Weekly number of hospital admissions",
+       subtitle = "scenarios published by INSERM on January 16, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### February 2 scénarios
+#### February 2 scenarios
 
 ```{r 2021_02_02_Inserm}
 #2 février
@@ -520,19 +520,19 @@ scenario %>%
   ggplot(aes(date, value+1700, group=scenario, color="scenarios")) + geom_smooth(se=F) +
   geom_line(data= true_data_new_hosp_rea_weekly, 
             aes(x=date, y=new_hosp_week, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-02-15"), y = 25000, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-02-15"), y = 25000, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-01"), date("2021-03-27")) + ylim(0,37000) + g_theme +
-  labs(title = "Nombre hebdomadaire d'admission à l'hôpital",
-       subtitle = "scénarios publiés par l'INSERM le 2 février 2021\n",
+  labs(title = "Weekly number of hospital admissions",
+       subtitle = "scenarios published by INSERM on February 2, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### February 14 scénarios
+#### February 14 scenarios
 
 ```{r 2021_02_14_Inserm}
 #14 février
@@ -543,15 +543,15 @@ scenario %>%
   ggplot(aes(date, value+1700, group=scenario, color="scénarios")) + geom_smooth(se=F) +
   geom_line(data= true_data_new_hosp_rea_weekly, 
             aes(x=date, y=new_hosp_week, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-02-27"), y = 25000, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-02-27"), y = 25000, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-01"), date("2021-03-27")) + ylim(0,37000) + g_theme +
-  labs(title = "Nombre hebdomadaire d'admission à l'hôpital",
-       subtitle = "scénarios publiés par l'INSERM le 14 février 2021\n",
+  labs(title = "Weekly number of hospital admissions",
+       subtitle = "scenarios published by INSERM on February 14, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -575,7 +575,7 @@ For the February 23 report, the scenarios presented are generally consistent wit
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### February 8 scénarios
+#### February 8 scenarios
 
 ```{r 2021_02_08_Pasteur}
 # February 8 2021
@@ -587,19 +587,19 @@ scenario %>%
   ggplot(aes(date, value-100, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-01-15"), y = 1100, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-01-15"), y = 1100, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-03-01"), y = 2500, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-03-01"), y = 2500, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-10"), date("2021-03-27")) + g_theme +
-  labs(title = "Admission journalières à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 8 février 2021\n",
+  labs(title = "Daily number of hospital admissions",
+       subtitle = "scenarios published by Pasteur Institute on February 8, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### February 23 scénarios
+#### February 23 scenarios
 
 ```{r 2021_02_23_Pasteur}
 
@@ -614,15 +614,15 @@ scenario %>%
   ggplot(aes(date, value+350, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-01-15"), y = 1100, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-01-15"), y = 1100, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-03-01"), y = 900, label = "scénario", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-03-01"), y = 900, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-10"), date("2021-03-27")) + g_theme +
-  labs(title = "Admission journalières à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 23 février 2021\n",
+  labs(title = "Daily number of hospital admissions",
+       subtitle = "scenarios published by Pasteur Institute on February 23, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -728,7 +728,7 @@ On the other hand, the observed recession follows faithfully the scenario of the
 
 ### {.tabset .tabset-fade .tabset-pills}
 
-#### Scenarios of April 26
+####  April 26 Scenarios
 
 ```{r 2021_04_26_Pasteur}
 scenario <- read.csv("data/2021_04_26_Pasteur/new_hosp.csv", sep=";") %>%
@@ -739,17 +739,17 @@ scenario %>%
   ggplot(aes(date, value+100, group=pasteur, color="scénarios")) + geom_smooth(se=F) +
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-05-20"), y = 400, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-05-20"), y = 400, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-05-15"), y = 1700, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-05-15"), y = 1700, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-03-15"), date("2021-06-15")) + ylim(0,2200) + g_theme +
-  labs(title = "Admissions journalières à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 26 avril 2021\n",
+  labs(title = "Daily hospital admissions",
+       subtitle = "scenarios published by Pasteur Institute on April 26, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
-#### Scenarios of May 21
+#### May 21 Scenarios
 
 ```{r Cauchemez_twitter, echo=FALSE, out.width="400px"}
 knitr::include_graphics("images/Pasteur_2021_Avril/Cauchemez.png")
@@ -845,13 +845,13 @@ scenario %>%
   ggplot(aes(date, value+200, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
   geom_line(data= true_data_beds_hosp_rea, 
             aes(x=date, y=rea, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2021-08-30"), y = 1000, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-30"), y = 1000, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-25"), y = 9500, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-25"), y = 9500, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(as.Date("2021-07-15"), as.Date("2021-10-10")) + g_theme +
-  labs(title = "Lits de soins critiques occupés",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+  labs(title = "Intensive Care Unit Beds",
+       subtitle = "scenarios published by Pasteur Institute on July 26, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -867,13 +867,13 @@ scenario %>%
   ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_rea_right, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2021-08-20"), y = 80, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-20"), y = 80, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-15"), y = 800, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-15"), y = 800, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
-  labs(title = "Admissions en soins critiques",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+  labs(title = "Daily Intensive Care Unit Admissions",
+       subtitle = "scenarios published by Pasteur Institute on July 26, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -888,13 +888,13 @@ scenario %>%
   ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_smooth(se=F) +
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-08-20"), y = 400, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-20"), y = 400, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-15"), y = 3200, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-15"), y = 3200, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
-  labs(title = "Admission journalières à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+  labs(title = "Daily Hospital Admissions",
+       subtitle = "scenarios published by Pasteur Institute on July 26, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -915,13 +915,13 @@ scenario %>%
   ggplot(aes(date, value, group=scenarios, color="scénarios")) + geom_smooth(se=F) + 
   geom_line(data= true_data_beds_hosp_rea, 
             aes(x=date, y=rea, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2021-07-20"), y = 1200, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-07-20"), y = 1200, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-20"), y = 5800, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-20"), y = 5800, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
-  labs(title = "Lits de soins critiques",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 5 août 2021\n",
+  labs(title = "Intensive Care Unit Beds",
+       subtitle = "scenarios published by Pasteur Institute on August 5, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -937,13 +937,13 @@ scenario %>%
   ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_line(size=1) +
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_rea_center, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2021-08-15"), y = 120, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-15"), y = 120, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-15"), y = 500, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-15"), y = 500, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-07-15"), date("2021-10-10")) + ylim(0,600) + g_theme +
-  labs(title = "Admissions en soins critiques",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 5 août 2021\n",
+  labs(title = "Intensive Care Unit Admissions",
+       subtitle = "scenarios published by Pasteur Institute on August 5, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
   
 ```
@@ -959,13 +959,13 @@ scenario %>%
   ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_line(size=1) + 
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_hosp_center, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2021-08-05"), y = 400, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-05"), y = 400, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-13"), y = 1900, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-08-13"), y = 1900, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-07-15"), date("2021-10-10")) + ylim(0,2500) + g_theme +
-  labs(title = "Admissions à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 5 août 2021\n",
+  labs(title = "Hospital Admissions",
+       subtitle = "scenarios published by Pasteur Institute on August 5, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -1120,13 +1120,13 @@ scenario %>%
   ggplot(aes(date, value+30, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
   geom_line(data= true_data_new_hosp_rea, 
             aes(x=date, y=new_hosp_center, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2021-11-28"), y = 1100, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-11-28"), y = 1100, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-12-07"), y = 600, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-12-07"), y = 600, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-09-15"), date("2021-12-20")) + ylim(0,1400) + g_theme +
-  labs(title = "Admissions à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 4 octobre 2021\n",
+  labs(title = "Hospital Admissions",
+       subtitle = "scenarios published by Pasteur Institute on October 4, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -1210,13 +1210,13 @@ scenario <- read.csv("data/2021_12_06_projection_pasteur/beds_SC.csv", sep=";") 
 ggplot(data = scenario, aes(x = date)) +
   geom_smooth(aes(y=projection, color="projection"), size=1, se=F) +
   geom_line(aes(y=reality, color = " réalité"), size=1) +
-  annotate('text', x = as.Date("2021-12-08"), y = 3700, label = "projection à 2 semaines\nsurestimation +30%", color = '#515a5a', fontface = "italic",
+  annotate('text', x = as.Date("2021-12-08"), y = 3700, label = "2 weeks projections\noverestimation +30%", color = '#515a5a', fontface = "italic",
            family = "Times New Roman") +
-  annotate('text', x = as.Date("2021-12-15"), y = 2500, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-12-15"), y = 2500, label = "reality", color = myred, fontface = "bold",
           family = "Times New Roman") + 
   xlim(date("2021-11-01"), date("2021-12-20")) + g_theme + ylim(0, NA) +
-  labs(title = "Lits occupés en soins critiques",
-       subtitle = "Projection de l'Institut Pasteur du 6 décembre 2021\n",
+  labs(title = "Intensive Care Unit Beds",
+       subtitle = "Pasteur Institute projection December 6, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -1230,13 +1230,13 @@ scenario <- read.csv("data/2021_12_06_projection_pasteur/beds_hosp.csv", sep=";"
 ggplot(data = scenario, aes(x = date)) +
   geom_smooth(aes(y=projection, color="projection"), size=1, se=F) +
   geom_line(aes(y=reality, color = " réalité"), size=1) +
-  annotate('text', x = as.Date("2021-12-07"), y = 11000, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+  annotate('text', x = as.Date("2021-12-07"), y = 11000, label = "2 weeks projections\noverestimation +40%", color = '#515a5a', fontface = "italic",
            family = "Times New Roman") +
-  annotate('text', x = as.Date("2021-12-12"), y = 6900, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-12-12"), y = 6900, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-11-01"), date("2021-12-20")) + g_theme + ylim(0, NA) +
-  labs(title = "Lits occupés en hospitalisation conventionnelle",
-       subtitle = "Projection de l'Institut Pasteur du 6 décembre 2021\n",
+  labs(title = "Hospital Beds",
+       subtitle = "Pasteur Institute projection December 6, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -1250,13 +1250,13 @@ scenario <- read.csv("data/2021_12_06_projection_pasteur/new_SC.csv", sep=";") %
 ggplot(data = scenario, aes(x = date)) +
   geom_smooth(aes(y=projection, color="projection"), size=1, se=F) +
   geom_line(aes(y=reality, color = " réalité"), size=1) +
-  annotate('text', x = as.Date("2021-12-05"), y = 350, label = "projection à 2 semaines \nsurestimation +45%", color = '#515a5a', fontface = "italic",
+  annotate('text', x = as.Date("2021-12-05"), y = 350, label = "2 weeks projections\noverestimation +45%", color = '#515a5a', fontface = "italic",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-12-12"), y = 230, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-12-12"), y = 230, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-11-01"), date("2021-12-20")) + g_theme + ylim(0, NA) +
-  labs(title = "Admissions journalières en soins critiques",
-       subtitle = "Projection de l'Institut Pasteur du 6 décembre 2021\n",
+  labs(title = "Daily Intensive Care Units Admissions",
+       subtitle = "Pasteur Institute projection December 6, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -1270,13 +1270,13 @@ scenario <- read.csv("data/2021_12_06_projection_pasteur/new_hosp.csv", sep=";")
 ggplot(data = scenario, aes(x = date)) +
   geom_smooth(aes(y=projection, color="projection"), size=1, se=F) +
   geom_line(aes(y=reality, color = " réalité"), size=1) +
-  annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+  annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "2 weeks projections\noverestimation +40%", color = '#515a5a', fontface = "italic",
            family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2021-12-10"), y = 900, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-11-01"), date("2021-12-20")) + g_theme + ylim(0, NA) +
-  labs(title = "Admissions journalières à l'hôpital",
-       subtitle = "Projection de l'Institut Pasteur du 6 décembre 2021\n",
+  labs(title = "Daily Hospital Admissions",
+       subtitle = "Pasteur Institute projection December 6, 2021\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -1343,13 +1343,13 @@ scenario %>%
             aes(x=date, value, group=scenarios), color = mygrey, size=1) +
   geom_line(data= true_data_beds_hosp_rea, 
             aes(x=date, y=rea, color = myred, group="réalité"), size=1) +
-  annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") +
-  annotate('text', x = as.Date("2022-03-20"), y = 4400, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2022-03-20"), y = 4400, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-12-01"), date("2022-04-01")) + ylim(0,8000) +
-  labs(title = "Lits de soins critiques",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 7 janvier 2022\n",
+  labs(title = "Intensive Care Unit Beds",
+       subtitle = "scenarios published by the Pasteur Institute on January 7, 2022\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -1366,13 +1366,13 @@ scenario %>%
             aes(x=date, value, group=scenarios), color = mygrey, size=1) +
   geom_line(data= true_data_beds_hosp_rea, 
             aes(x=date, y=rea, color = myred, group="réalité"), size=1) +
-  annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") +
-  annotate('text', x = as.Date("2022-03-20"), y = 4400, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2022-03-20"), y = 4400, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-12-01"), date("2022-04-01")) + ylim(0,8000) +
-  labs(title = "Lits de soins critiques",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 7 janvier 2022\n",
+  labs(title = "Intensive Care Unit Beds",
+       subtitle = "scenarios published by the Pasteur Institute on January 7, 2022\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 
@@ -1395,13 +1395,13 @@ scenario %>%
             aes(x=date, value, group=scenarios), color = mygrey, size=1) +
   geom_line(data= true_data_beds_hosp_rea, 
             aes(x=date, y=rea, color = myred, group="réalité"), size=1) +
-  annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") +
-  annotate('text', x = as.Date("2021-12-25"), y = 5800, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-12-25"), y = 5800, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-12-01"), date("2022-04-01")) + ylim(0,11000) +
-  labs(title = "Lits de soins critiques",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 7 janvier 2022\n",
+  labs(title = "Intensive Care Unit Beds",
+       subtitle = "scenarios published by the Pasteur Institute on January 7, 2022\n",
        caption = "\ntwitter : @Covid_Scenarios")
 
 ```
@@ -1419,13 +1419,13 @@ scenario %>%
             aes(x=date, value, group=scenarios), color = mygrey, size=1) +
   geom_line(data= true_data_beds_hosp_rea, 
             aes(x=date, y=rea, color = myred, group="réalité"), size=1) +
-  annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "réalité", color = myred, fontface = "bold",
+  annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "reality", color = myred, fontface = "bold",
            family = "Times New Roman") +
-  annotate('text', x = as.Date("2021-12-25"), y = 5800, label = "scénarios", color = mygrey, fontface = "bold",
+  annotate('text', x = as.Date("2021-12-25"), y = 5800, label = "scenarios", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
   xlim(date("2021-12-01"), date("2022-04-01")) + ylim(0,11000) +
-  labs(title = "Lits de soins critiques",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 7 janvier 2022\n",
+  labs(title = "Intensive Care Unit Beds",
+       subtitle = "scenarios published by the Pasteur Institute on January 7, 2022\n",
        caption = "\ntwitter : @Covid_Scenarios")
 ```
 

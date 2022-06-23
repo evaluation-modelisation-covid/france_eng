@@ -1,13 +1,13 @@
 name: "my-website"
 output_dir: "."
 navbar:
-  title: "Rétrospective Covid"
+  title: "Covid Scenarios"
   left:
-    - text: "Accueil"
+    - text: "Scenarios"
       href: index.html
-    - text: "Méthodologie"
+    - text: "Méthodology"
       href: methodology.html
-    - text: "Démarche"
+    - text: "Process"
       href: process.html
     - text: "Impact"
       href: impact.html      

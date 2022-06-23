@@ -105,7 +105,7 @@ Thus, in its [report of March 12, 2020](https://solidarites-sante.gouv.fr/IMG/pd
 
 
 ```{r Sweden_Imperial_ICU_peak, echo=FALSE, out.width="500px"}
-knitr::include_graphics("images/Imperial_Sweden/Sweden_icu.svg")
+knitr::include_graphics("images/Imperial_Sweden/Sweden_icu.png")
 ```
 
 The model scenarios are represented by the grey bars, representing 2 extremes: strict containment as followed by the other European countries, and no action. The approach followed by Sweden is intermediate, somewhere in between.
