@@ -153,11 +153,11 @@ Thus, the comparison between modeling scenarios and reality will make it possibl
 
 </summary>
 
-By March 2020, there was a great deal of uncertainty about the impact that covid-19 would have. When Italy began to be heavily affected in mid-March, many European countries realized that covid-19 was likely to have significant consequences To anticipate the evolution of the pandemic, policy-makers turned to the field of epidemiological modelling.
+By March 2020, there was a great deal of uncertainty about the impact that covid-19 would have. When Italy began to be heavily affected in mid-March, many European countries realized that covid-19 was likely to have significant consequences. To anticipate the evolution of the pandemic, policy-makers turned to the field of epidemiological modelling.
 
 A team of scientists from Imperial College (London), led by Professor Neil Ferguson, published on March 16 the [report](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) that led many European governments, including the [French government](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html), to implement lockdowns. The scenarios presented in the report anticipated, without any measures, about 500,000 deaths in less than 3 months in the UK, and similar figures for France. Implementing standard measures such as planned in pandemic preparedness (mitigation strategy) plans would yield 250 000 deaths. The report argued that only the implementation of stricter measures to suppress the virus (such as lockdown) would allow the wave to be contained and that it would be the only way to avoid saturating the hospital system. Relying on this report, many governments have chosen to implement lockdown-style strategies.
 
-Of course, projections of what would happen in the absence of measures cannot be compared with what actually happened in a country that implemented a lockdown. This is one of the most common counter-arguments to the critics of epidemiological models: it is precisely because of the measurements that the modelling scenarios did not come true.
+Of course, projections of what would happen in the absence of measures cannot be compared with what actually happened in a country that implemented a lockdown. This is one of the most common counter-arguments to the critics of epidemiological models: it is precisely because of the measures that the modelling scenarios did not come true.
 
 But there is one country that allows us to test the validity of the modeling scenarios: Sweden. In the first wave, Sweden chose not to confine itself, preferring to rely on lighter measures. It is therefore possible to compare what the scenarios for Sweden predicted and what actually happened.
 
@@ -173,7 +173,7 @@ But there is one country that allows us to test the validity of the modeling sce
 
 [The appendix](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) of the Imperial College [report 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/), published on March 26, contains models of the epidemic in all countries, including Sweden.
 
-The first 2 graphs represent the peak occupancy of ICU and hospital beds. The gray bars represent the Imperial College scenarios: early strict lockdown, late strict lockdown, and no action. The red bar represents the reality. Since Sweden has implemented social distancing measures without imposing lockdown, the observed numbers should have been somewhere between the "lockdown" and "no restictions" scenarios. The reality is quite different. Even though Sweden did NOT implement lockdown, the scenarios WITH confinement overestimate the peak of used beds by a factor 2 to 10. A scenario with some restrictions should be between lockdown and no restrictions scenarios, yielding a overestimation by a factor 10 to 60.
+The first 2 graphs represent the peak occupancy of ICU and hospital beds. The gray bars represent the Imperial College scenarios: early strict lockdown, late strict lockdown, and no action. The red bar represents the reality. Since Sweden has implemented social distancing measures without imposing lockdown, the observed numbers should have been somewhere between the "lockdown" and "no restrictions" scenarios. The reality is quite different. Even though Sweden did NOT implement lockdown, the scenarios WITH lockdown overestimate the peak of used beds by a factor 2 to 10. A scenario with some restrictions should be between lockdown and no restrictions scenarios, yielding a overestimation by a factor 10 to 60.
 
 The last graph shows the different Imperial College scenarios for mortality in grey, and the actual number of deaths in red. Here again, the scenarios greatly overestimate mortality. The actual number of deaths corresponds to the early lockdown scenario, which was obviously not the approach taken by Sweden. The intermediate scenarios of social distancing overestimate mortality by a factor 3 to 7.
 
@@ -477,7 +477,7 @@ During the winter 2020-2021 marked by an extended curfew, a deterioration of the
 
 The first regional lockdowns were implemented on March 20, followed later by others until the national lockdown on April 3. The latency between the implementation of measures and their effect on hospitalizations being at least one week, and even 2 to 3 weeks as indicated by the [scientific council report](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) ("the first effects of the measures adopted [...] can only appear after two to three weeks"), we stop our graph at March 27. Beyond that point, it is no longer legitimate to compare the dynamics of the pandemic to the "no lockdown" scenarios.
 
-Before these dates, a number of measures cis very unlikely to impact the national dynamics of the epidemic: on 25 February weekend lockdown in Dunkerque and part of the Alpes-Maritimes, and on 4 March weekend lockdown in Pas-de-Calais, as well as closed shopping centers of more than 10,000 m2.
+Before these dates, a number of measures unlikely to impact the national dynamics of the epidemic were taken: on 25 February weekend lockdown in Dunkerque and part of the Alpes-Maritimes, and on 4 March weekend lockdown in Pas-de-Calais, as well as closed shopping centers of more than 10,000 m2.
 
 </details>
 
@@ -573,7 +573,7 @@ scenario %>%
 
 </summary>
 
-For the February 8 report, the 2 main scenarios extending into March reflect a "no vaccination" hypothesis and an "optimistic" vaccination hypothesis. It is specified that "in practice, the impact of the current campaign is likely to be intermediate between the scenarios with and without vaccination", hence our choice to represent these 2 curves. Later in the report, two other secondary variantions are presented to illustrate the influence of a small variation in the reproduction rate: these are the curves stopping in March. We stopped their curves here since they explored the hypothesis of a lockdown starting late February, which did not happen.
+For the February 8 report, the 2 main scenarios extending into March reflect a "no vaccination" hypothesis and an "optimistic" vaccination hypothesis. It is specified that "in practice, the impact of the current campaign is likely to be intermediate between the scenarios with and without vaccination", hence our choice to represent these 2 curves. Later in the report, two other secondary variations are presented to illustrate the influence of a small variation in the reproduction rate: these are the curves stopping in March. We stopped their curves here since they explored the hypothesis of a lockdown starting late February, which did not happen.
 
 Only the most optimistic scenario fits reality, although it was not the main scenario presented to the decision makers. The others overestimate actual admissions by a factor of 50-100%.
 
@@ -650,7 +650,7 @@ A retrospective assessment of the February 8 report will be made in [a subsequen
 
 This statement is accompanied by the figure below. One year into the pandemic, this figure will be the first retrospective comparison officially published by the Pasteur Institute.
 
-However, we could not find such a projection in [the February 8 report](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf)r. All those we found are represented on our graphs presented above. 
+However, we could not find such a projection in [the February 8 report](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf). All those we found are represented on our graphs presented above. 
 
 <center>
 
@@ -830,7 +830,7 @@ For the April 26 report, the curves are taken from Figures 3b and 3d. The assump
 
 </center>
 
-For the May 21 report, we did not need to check the hypotheses, as Simon Cauchemez himself had compared the epidemic trajectory to his scenarios, and th significant differences only occur after mid-June.
+For the May 21 report, we did not need to check the hypotheses, as Simon Cauchemez himself had compared the epidemic trajectory to his scenarios, and the significant differences only occur after mid-June.
 
 In both cases we stop the comparison in mid-June, when the appearance of the delta variant not predicted by the models renders the hypotheses null and void.
 
