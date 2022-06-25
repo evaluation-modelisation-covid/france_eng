@@ -5,9 +5,9 @@ navbar:
   left:
     - text: "Scenarios"
       href: index.html
-    - text: "Méthodology"
+    - text: "Methodology"
       href: methodology.html
-    - text: "Process"
+    - text: "Rationale"
       href: process.html
     - text: "Impact"
       href: impact.html      
