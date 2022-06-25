@@ -1488,7 +1488,7 @@ scenario %>%
 
 The Pasteur Institute self-evaluation was forwarded to the Senators as part of their inquiry about [the adequacy of the vaccine pass to the evolution of the covid-19 epidemic](https://www.senat.fr/rap/r21-537/r21-5371.pdf). It is stated that "the projections of the Pasteur Institute have turned out to be within the anticipated ranges". We detail in the following section the reasons why we think this statement is seriously challenged. Moreover, there is no mention of other past scenarios when the Pasteur Institute was completely wrong, for instance in [August 2021 with the sanitary pass](https://evaluation-modelisation-covid.github.io/france_eng/index.html#august-2021-4th-wave-and-delta-variant)
 
-![](images/Pasteur_2022_Fevrier/senate_pasteur){width="400"}
+![](images/Pasteur_2022_Fevrier/senate_pasteur.png){width="500"}
 
 
 The Pasteur Institut's self-evaluation report was also quoted in [some press articles](https://www.huffingtonpost.fr/entry/institut-pasteur-avait-vu-juste-pour-la-5e-vague-voici-ses-predictions-sur-la-fin-de-lhiver_fr_620d0102e4b05706db70a281) as saying that "Institut Pasteur was almost about the impact of Omicron". 
