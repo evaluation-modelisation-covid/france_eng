@@ -278,7 +278,7 @@ Although not corresponding to reality, we have chosen to represent the "no actio
 
 - Although unrealistic, the "no action" projections are often put forward as a counterfactual to the absence of lockdown, as illustrated by the case of the hospital peak mentioned above. This is also the case in the press (figure of [500,000 deaths in the UK](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html)) or by politicians (figure of [450,000 people saved](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees) according to the Spanish Minister of Justice). This [article by BFM](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html) even states that a mitigation strategy is a "laissez-faire" strategy :
 
->By "laissez-faire," researchers mean so-called mitigation measures, such as quarantining identified Covid-19 cases and their relatives and closing schools
+> By "laissez-faire," researchers mean so-called mitigation measures, such as quarantining identified Covid-19 cases and their relatives and closing schools
 
 </details>
 
@@ -670,13 +670,13 @@ However, we could not find such a projection in [the February 8 report](https://
 
 The INSERM modelling of January 16 explicitly advocates for thougher social distancing measures in its summary :
 
->"These findings show the need to strengthen social distancing measures"
+> "These findings show the need to strengthen social distancing measures"
 
 Strikingly, it acknowledges not taking into account the curfew, a measure whose very target was not to implement a lockdown
 
->It does not account for the curfew anticipated to 6pm and extended to the national territory on January 16, 2021. The evaluation of this social distancing measure will be performed on epidemic data in the next few weeks. For this reason, we provided a more optimistic scenario assuming a stable epidemic activity. 
+> It does not account for the curfew anticipated to 6pm and extended to the national territory on January 16, 2021. The evaluation of this social distancing measure will be performed on epidemic data in the next few weeks. For this reason, we provided a more optimistic scenario assuming a stable epidemic activity. 
 
-You will find more presisions about that on the following part**Discussion of scenario assumptions (technical)*
+You will find more presisions about that on the following part *Discussion of scenario assumptions (technical)*
 
 These results were also presented in a [special report of the Scientific Council](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) studying the implementation of a strict lockdown in early February. 
 
@@ -787,22 +787,17 @@ knitr::include_graphics("images/Pasteur_2021_Avril/Cauchemez.png")
 
 These models supported the [Scientific Council report of May 6, 2021](https://www.vie-publique.fr/sites/default/files/rapport/pdf/279792.pdf). Although the Scientific Council specifies that "These projections [...] are not predictions", it relies on them to estimate that "under plausible assumptions, a significant rebound of the epidemic is possible during the summer period if control measures are relaxed too quickly, even when considering a significant rate of vaccination. This is one of the arguments that pushed the Scientific Council to position itself in favor of a "prudent and controlled" reopening of social activities following the 3rd lockdown.
 
-Several epidemiologists made statements in line with the Pasteur Institute April 26 report. [Here](https://france3-regions.francetvinfo.fr/occitanie/herault/montpellier/deconfinement-mircea-sofonea-epidemiologiste-a-montpellier-on-va-rester-a-5-ou-6000-patients-covid-des-semaines-2064442.html) and [there](https://www.francetvinfo.fr/sante/maladie/coronavirus/confinement/covid-19-il-faut-attendre-au-moins-cinquante-jours-pour-voir-les-hospitalisations-baisser-estime-un-epidemiologiste_4601767.html) for instance, on Apris 27 : 
+Several epidemiologists made statements in line with the Pasteur Institute April 26 report. [Here](https://france3-regions.francetvinfo.fr/occitanie/herault/montpellier/deconfinement-mircea-sofonea-epidemiologiste-a-montpellier-on-va-rester-a-5-ou-6000-patients-covid-des-semaines-2064442.html) and [there](https://www.francetvinfo.fr/sante/maladie/coronavirus/confinement/covid-19-il-faut-attendre-au-moins-cinquante-jours-pour-voir-les-hospitalisations-baisser-estime-un-epidemiologiste_4601767.html) for instance, on April 27 : 
 
 >It will take at least 50 days to see a drop in hospitalizations
 >
 >We will remain at 5,000 or 6,000 Covid patients for weeks
->
->Mircea Sofonea, epidemiologist
 
 The decrease occured the next week, and 50 days later (June 15) there were less than 1,000 ICU patients. Other examples can be found on [April 19](https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/dominique-costagliola-je-ne-vois-pas-comment-on-peut-esperer-une-baisse-massive-des-cas-d-ici-fin-mai-7022253) and [May 5](https://www.lemonde.fr/planete/article/2021/05/05/dominique-costagliola-la-probabilite-d-eviter-une-nouvelle-saturation-totale-de-l-hopital-est-faible_6079142_3244.html)
 
 >I don't see how we can expect a massive drop by the end of May
 >
->La probabilité d’éviter une nouvelle saturation totale de l’hôpital est faible 
->
->Dominique Costagliola, epidemiologist
-
+>The probability of avoiding a new total saturation of the hospital is low 
 
 </details>
 
@@ -1112,7 +1107,7 @@ The actual peak is below the most optimistic scenario, the median scenarios are 
 
 </summary>
 
-This lifting of restrictions was strongly criticized by many scientists in an open letter to the prestigious medical journal [The Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext). They called it "dangerous and premature". This open letter was picked up by various [British](https://www.dailymail.co.uk/news/article-9766759/Experts-sign-letter-condemning-Government-s-dangerous-unethical-experiment.html) and [international](https://edition.cnn.com/2021/07/18/uk/boris-johnson-covid-gamble-freedom-day-intl-gbr-cmd/index.html) media outlets, which relied on these models to announce "a third major wave of hospitalizations and deaths" following the lifting of the restrictions, described as a *dangerous and unethical experimen*".
+This lifting of restrictions was strongly criticized by many scientists in an open letter to the prestigious medical journal [The Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext). They called it "dangerous and premature". This open letter was picked up by various [British](https://www.dailymail.co.uk/news/article-9766759/Experts-sign-letter-condemning-Government-s-dangerous-unethical-experiment.html) and [international](https://edition.cnn.com/2021/07/18/uk/boris-johnson-covid-gamble-freedom-day-intl-gbr-cmd/index.html) media outlets, which relied on these models to announce "a third major wave of hospitalizations and deaths" following the lifting of the restrictions, described as a *dangerous and unethical experiment*".
 
 The fact that the models greatly overestimated the impact of the reopening was [described in the scientific journal Nature](https://www.nature.com/articles/d41586-021-02125-1) by a renowned epidemiologist:
 
@@ -1197,7 +1192,7 @@ Our curves are derived from Figure 7.
 
 - 3 hypothesis variants on vaccine efficacy against hospitalization and infection respectively of 95% and 60% (reference), 90% and 60%, and 95% and 80%.
 
-As said before, the "relaxation of social distancing" is an hypothesis impossible to verify. An imperfect measure of it would be Google mobility trend, which shows no rela change over the period :
+As said before, the "relaxation of social distancing" is an hypothesis impossible to verify. An imperfect measure of it would be Google mobility trend, which shows no real increase over the period :
 
 <center>
 
@@ -1491,7 +1486,7 @@ The Pasteur Institute self-evaluation was forwarded to the Senators as part of t
 ![](images/Pasteur_2022_Fevrier/senate_pasteur.png){width="500"}
 
 
-The Pasteur Institut's self-evaluation report was also quoted in [some press articles](https://www.huffingtonpost.fr/entry/institut-pasteur-avait-vu-juste-pour-la-5e-vague-voici-ses-predictions-sur-la-fin-de-lhiver_fr_620d0102e4b05706db70a281) as saying that "Institut Pasteur was almost about the impact of Omicron". 
+The Pasteur Institut's self-evaluation report was also quoted in [some press articles](https://www.huffingtonpost.fr/entry/institut-pasteur-avait-vu-juste-pour-la-5e-vague-voici-ses-predictions-sur-la-fin-de-lhiver_fr_620d0102e4b05706db70a281) as saying that "Institut Pasteur was right about almost everything on the impact of Omicron". 
 
 </details>
 
@@ -1529,7 +1524,7 @@ Moreover, unlike us, the self-evaluation does not present the "less likely" scen
 
 We note that while the team regularly insists that ["the scenarios are not predictions"](https://www.liberation.fr/sciences/2020/11/03/simon-cauchemez-le-pic-de-cette-vague-en-reanimation-devrait-arriver-mi-novembre_1804291/), the self-assessment is less cautious, with the term "predicted" recurring several times in the report, e.g., "the predicted and observed dynamics of daily admissions are also close."
 
-We recall that testing the adequacy of assumptions is important, because as the beginning of each of the Institut Pasteur reports reminds us:
+We remind that testing the adequacy of assumptions is important, because as the beginning of each of the Institut Pasteur reports reminds us:
 
 > The trajectories described depend on the assumptions made; if the assumptions are not realized, the observed dynamics may differ from the projections.
 
