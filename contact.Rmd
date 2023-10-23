@@ -1,7 +1,5 @@
 ---
-title: ""
+title: "Contact"
 ---
 
-You can reach us by email at the following address: [evaluation.modelisations.covid\@gmail.com](mailto:%20evaluation.modelisations.covid@gmail.com).
 
-You can also contact us via twitter: <https://twitter.com/Covid_Scenarios>.

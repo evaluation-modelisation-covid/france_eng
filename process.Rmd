@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Rationale"
 ---
 
 ```{r setup, include=FALSE}
@@ -34,14 +34,26 @@ mygrey <- '#b4b4b4'
 #height and width of graphs
 w <- 4.5
 h <- 5.2
+
+size_adimssion <- .4
+alpha_admission <- .3
 ```
 
-
 ```{r loading true data, echo=FALSE, message=FALSE, warning=FALSE}
-data_gouv_new_hosp_rea <- read.csv(url("https://www.data.gouv.fr/fr/datasets/r/6fadff46-9efd-4c53-942a-54aca783c30c"), sep=";") %>%
+# IF NO INTERNET CONNECTION OR LINK BROKEN, UNCOMMENT BELOW TO LOAD LOCAL DATA
+data_gouv_new_hosp_rea <-
+  read.csv(url("https://www.data.gouv.fr/fr/datasets/r/6fadff46-9efd-4c53-942a-54aca783c30c"), sep=";") %>%
   mutate(date = as.Date(jour))
-data_gouv_beds_hosp_rea <- read.csv(url("https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7"), sep=";")  %>%
+data_gouv_beds_hosp_rea <-
+  read.csv(url("https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7"), sep=";")  %>%
   mutate(date = as.Date(jour))
+
+# #TO UNCOMMENT
+# local_file_path <- "data/0_real_data_back_up/" # local file path
+# data_gouv_new_hosp_rea <- read.csv2(paste0(local_file_path, "covid-hospit-incid-2023-03-31-18h01.csv"), sep = ";") %>%
+#   mutate(date = as.Date(jour))
+# data_gouv_beds_hosp_rea <- read.csv2(paste0(local_file_path, "covid-hospit-2023-03-31-18h01.csv"), sep = ";") %>%
+#   mutate(date = as.Date(jour))
 
 #Lits occupés en réanimation, hospitalisation et hospitalisation conventionnelle
 true_data_beds_hosp_rea <- data_gouv_beds_hosp_rea %>%
@@ -90,10 +102,62 @@ true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>%
 
 ```
 
+```{r f_graph}
+f_graph <- 
+  function(
+    true_data, scenarios, 
+    variable, date_adjust, value_adjust,
+    x_label_realite, y_label_realite,
+    x_label_scenario, y_label_scenario,
+    x_label_publication, y_label_publication,
+    x_min, x_max, y_max,
+    str_title, str_subtitle
+  ){
+    scenarios %>%
+      gather(key=pasteur, value = value, -date) %>%
+      ggplot(
+        aes(
+          date+date_adjust, value+value_adjust, 
+          group=pasteur, color="scenarios"
+          )
+        ) + 
+      geom_smooth(se=F) + 
+      geom_line(
+        data= true_data, 
+        aes(
+          x=date, y=!!as.symbol(variable), 
+          color = "reality", group="reality"
+          ),
+        size = 1
+        ) +
+      annotate(
+        'text', x = as.Date(x_label_realite), y = y_label_realite, label = "reality", 
+        color = myred, fontface = "bold", family = "Times New Roman"
+        ) + 
+      annotate(
+        'text', x = as.Date(x_label_scenario), y = y_label_scenario, label = "scenarios", 
+        color = mygrey, fontface = "bold", family = "Times New Roman"
+        ) + 
+      geom_vline(
+        xintercept = as.Date(x_label_publication), linetype="dashed"
+      ) +
+      annotate(
+        'text', x = as.Date(x_label_publication)-1, y = y_label_publication, label = "publication\ndate", 
+        color = "black", fontface = "italic", family = "Times New Roman", hjust=1
+      ) +
+      xlim(date(x_min), date(x_max)) + ylim(0, y_max) + g_theme +
+      labs(
+        title = str_title,
+        subtitle = str_subtitle,
+        caption = "\ntwitter : @Covid_Scenarios"
+        )
+  }
+```
+
 
 # Our approach
 
-This site aims to provide a retrospective on the main modeling scenarios used to guide the major decisions taken over the last two years (e.g. confinements, curfews, or the implementation of the health pass). A detailed description of the modeling scenarios is available on the [Home] page (https://evaluation-modelisation-covid.github.io/france/). An explanation of the importance of the evaluation of modeling scenarios is available on the page [Impact](impact.html).
+This site aims to provide a retrospective on the main modeling scenarios used to guide the major decisions taken over the last two years (e.g. confinements, curfews, or the implementation of the health pass). A detailed description of the modeling scenarios is available on the [Home ](https://evaluation-modelisation-covid.github.io/france/) page. An explanation of the importance of the evaluation of modeling scenarios is available on the page [Impact](impact.html).
 
 # Why is evaluating modeling scenarios important?
 
@@ -134,86 +198,143 @@ However, modeling scenarios often incorporate several assumptions about the brak
 
 Thus, the comparison between modeling scenarios and reality will allow us to assess whether they have correctly anticipated reality.
 
-For example, during the 4th wave, the Institut Pasteur first published a report on July 9. After the announcement of the extension of the health pass in mid-July, the Institut Pasteur published a new report integrating the effect of this measure. Comparing the modelling of the July 9 report with reality is not legitimate, but comparing the predictions of the following report with reality is (because the impact of the measures has already been modelled).
+For example, during the 4th wave, the Institut Pasteur first published a report on July 9. After the announcement of the extension of the health pass in mid-July, the Institut Pasteur published new reports integrating the effect of this measure, on July 26 and Augst 5. Comparing the modelling of the July 9 report with reality is not legitimate, but comparing the predictions of the following reports with reality is (because the impact of the measures has already been modelled).
 
 ## {.tabset .tabset-fade .tabset-pills}
 
-### ICU beds
+### ICU Beds
 
-```{r 2021_07_26_Pasteur_ICU_beds}
+```{r fig.show='animate', animation.hook='gifski', dev='png'}
+# 26 juillet
 scenario <- read.csv("data/2021_07_26_Pasteur/beds_SC.csv", sep=";") %>%
   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
-scenario %>%
-  gather(key=pasteur, value = value, -date) %>%
-  ggplot(aes(date, value+200, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
-  geom_line(data= true_data_beds_hosp_rea, 
-            aes(x=date, y=rea, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2021-08-30"), y = 1000, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-25"), y = 9500, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") +
-  xlim(as.Date("2021-07-15"), as.Date("2021-10-10")) + g_theme +
-  labs(title = "Lits de soins critiques occupés",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
-       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
-       https://evaluation-modelisation-covid.github.io/france/")
-# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png", 
-#        plot =g, width = w, height = h)
-# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.svg", 
-#        plot =g, width = w, height = h)
+
+f_graph(
+  true_data_beds_hosp_rea, scenario, 
+  "rea", 0, 0,
+  "2021-08-30", 1000, #réalité label
+  "2021-08-25", 9500, #scénarios label
+  "2021-07-26", 6000, #date de publication label
+  "2021-07-15", "2021-10-01", 12500, #limites
+  "Intensive Care Unit Beds", 
+  "scenarios published by Pasteur Institute on July 26, 2021\n"
+) 
+
+# 5 aout
+scenario <- read.csv("data/2021_08_05_Pasteur/beds_SC.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+
+f_graph(
+  true_data_beds_hosp_rea, scenario, 
+  "rea", 0, 0,
+  "2021-08-30", 1000, #réalité label
+  "2021-08-20", 5800, #scénarios label
+  "2021-08-05", 6000, #date de publication label
+  "2021-07-15", "2021-10-01", 12500, #limites
+  "Intensive Care Unit Beds", 
+  "scenarios published by Pasteur Institute on August 5, 2021\n"
+) 
 ```
 
-### ICU admissions
+### ICU Admissions
 
-```{r 2021_07_26_Pasteur_ICU_adm}
-#admissions en soins critiques
+```{r fig.show='animate', animation.hook='gifski', dev='png'}
+# 26 juillet
 scenario <- read.csv("data/2021_07_26_Pasteur/new_SC.csv", sep=";") %>%
   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
-scenario %>%
-  gather(key=pasteur, value = value, -date) %>%
-  ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
-  geom_line(data= true_data_new_hosp_rea, 
-            aes(x=date, y=new_rea_right, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2021-08-20"), y = 80, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-15"), y = 800, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") +
-  xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
-  labs(title = "Admissions en soins critiques",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
-       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
-       https://evaluation-modelisation-covid.github.io/france/")
-# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png", 
-#        plot =g, width = w, height = h)
-# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.svg", 
-#        plot =g, width = w, height = h)
+
+f_graph(
+  true_data_new_hosp_rea, scenario, 
+  "new_rea_center", 0, 0,
+  "2021-08-19", 70, #réalité label
+  "2021-08-15", 800, #scénarios label
+  "2021-07-26", 600, #date de publication label
+  "2021-07-15", "2021-10-01", 900, #limites
+  "Intensive Care Unit Admission", 
+  "scenarios published by Pasteur Institute on July 26, 2021\n"
+) +
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date, y=new_rea, 
+      color = "reality", group="reality"
+      ),
+    size = size_adimssion, alpha=alpha_admission
+    ) 
+
+
+# 5 août
+scenario <- read.csv("data/2021_08_05_Pasteur/new_SC.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+
+f_graph(
+  true_data_new_hosp_rea, scenario, 
+  "new_rea_center", 0, 0,
+  "2021-08-19", 70, #réalité label
+  "2021-09-01", 610, #scénarios label
+  "2021-08-05", 600, #date de publication label
+  "2021-07-15", "2021-10-01", 900, #limites
+  "Intensive Care Unit Admissions", 
+  "scenarios published by Pasteur Institute on August 5, 2021\n"
+) +
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date, y=new_rea, 
+      color = "reality", group="reality"
+      ),
+    size = size_adimssion, alpha=alpha_admission
+    ) 
 ```
 
 ### Hospital Admissions
 
-```{r 2021_07_26_Pasteur_hosp_adm}
-
-#Nouvelles admissions à l'hôpital
+```{r fig.show='animate', animation.hook='gifski', dev='png'}
+#N 26 juillet
 scenario <- read.csv("data/2021_07_26_Pasteur/new_hospital.csv", sep=";") %>%
   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
-scenario %>%
-  gather(key=pasteur, value = value, -date) %>%
-  ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_smooth(se=F) +
-  geom_line(data= true_data_new_hosp_rea, 
-            aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-08-20"), y = 400, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-08-15"), y = 3200, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") +
-  xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
-  labs(title = "Admission journalières à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
-       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
-       https://evaluation-modelisation-covid.github.io/france/")
-# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png", 
-#        plot =g, width = w, height = h) 
-# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.svg", 
-#        plot =g, width = w, height = h) 
+
+f_graph(
+  true_data_new_hosp_rea, scenario, 
+  "new_hosp_center", 0, 0,
+  "2021-08-15", 350, #réalité label
+  "2021-08-15", 3200, #scénarios label
+  "2021-07-26", 2500, #date de publication label
+  "2021-07-15", "2021-10-01", 4100, #limites
+  "Daily Hospital Admissions",
+  "scenarios published by Pasteur Institute on July 26, 2021\n"
+) +
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date, y=new_hosp, 
+      color = "reality", group="reality"
+      ),
+    size = size_adimssion, alpha=alpha_admission
+    ) 
+
+# 5 août
+scenario <- read.csv("data/2021_08_05_Pasteur/new_hosp.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+
+f_graph(
+  true_data_new_hosp_rea, scenario, 
+  "new_hosp_center", 0, 0,
+  "2021-08-15", 350, #réalité label
+  "2021-08-13", 1900, #scénarios label
+  "2021-08-05", 2500, #date de publication label
+  "2021-07-15", "2021-10-01", 4100, #limites
+  "Daily Hospital Admissions",
+  "scenarios published by Pasteur Institute on August 5, 2021\n"
+) +
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date, y=new_hosp, 
+      color = "reality", group="reality"
+      ),
+    size = size_adimssion, alpha=alpha_admission
+    ) 
 ```
 
 ##
@@ -240,4 +361,4 @@ Overly pessimistic modelling can thus lead to unnecessary restrictions being mai
 
 These models were largely pessimistic, and thus overestimated the need to keep restrictive measures in place. Modelling that was not aligned with reality almost prevented a return to near-normal life for the British people.
 
-A more detailed description of the modeling scenarios is available on the [Modeling] page (https://evaluation-modelisation-covid.github.io/france/).
+A more detailed description of the modeling scenarios is available on the [Modeling](https://evaluation-modelisation-covid.github.io/france/) page.

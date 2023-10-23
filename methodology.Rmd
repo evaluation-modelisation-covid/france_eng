@@ -1,8 +1,8 @@
 ---
-title: ""
+title: "Methodology"
 ---
 
-# Méthodology
+# Our Protocol
 
 The curves presented on the site are derived from modelling scenarios that have impacted public policies implemented in France. They were mainly produced by the Pasteur Institute and Inserm. As the data are not available in free access, we have extracted them from the report curves using [WebPlotDigitilizer](https://automeris.io/WebPlotDigitizer/).
 
@@ -21,9 +21,9 @@ The complete list of modelling scenarios, and whether or not they were included 
 
 <details>
 
-<summary>
+<summary style="cursor: pointer; padding: 3px;">
 
-**Institut Pasteur Modelling**
+**Institut Pasteur Modelling** *(click to unfold)*
 
 </summary>
 
@@ -53,9 +53,9 @@ The complete list of modelling scenarios, and whether or not they were included 
 
 <details>
 
-<summary>
+<summary style="cursor: pointer; padding: 3px;">
 
-**INSERM Modelling**
+**INSERM Modelling**  *(click to unfold)*
 
 </summary>
 
@@ -65,9 +65,9 @@ The complete list of modelling scenarios, and whether or not they were included 
 
 <details>
 
-<summary>
+<summary style="cursor: pointer; padding: 3px;">
 
-**Imperial College Modelling**
+**Imperial College Modelling**  *(click to unfold)*
 
 </summary>
 
