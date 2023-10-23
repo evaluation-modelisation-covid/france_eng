@@ -1,6 +1,8 @@
 ---
-title: ""
+title: "Scenarios"
 ---
+
+The graphs showing the main results can all be accessed by scrolling. Click on the drop-down menus for more information.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, message=F, warning=F, fig.align = "center",  dev='svg')
@@ -97,7 +99,7 @@ true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>%
 
 <summary>
 
-**What is the point of studying modelling scenarios reliability ?**
+**What is the point of studying modelling scenarios reliability ?** ***(click to unfold)***
 
 </summary>
 
@@ -117,7 +119,7 @@ A more detailed explanation is available on the [Impact page](impact.html).
 
 <summary>
 
-**Isn't the point of modeling to prevent worst-case scenarios from happening ?**
+**Isn't the point of modeling to prevent worst-case scenarios from happening ?** ***(click to unfold)***
 
 </summary>
 
@@ -149,7 +151,7 @@ Thus, the comparison between modeling scenarios and reality will make it possibl
 
 <summary>
 
-**Context**
+**Context** ***(click to unfold)***
 
 </summary>
 
@@ -167,7 +169,7 @@ But there is one country that allows us to test the validity of the modeling sce
 
 <summary>
 
-**Comparison of scenarios to real data**.
+**Comparison of scenarios to real data** ***(click to unfold)***
 
 </summary>
 
@@ -225,7 +227,7 @@ knitr::include_graphics("images/Imperial_Sweden/Sweden_deaths.png")
 
 <summary>
 
-**Political and media impact**
+**Political and media impact** ***(click to unfold)***
 
 </summary>
 
@@ -251,7 +253,7 @@ While the source of this figure is not specified, it does correspond to the pess
 
 <summary>
 
-**Discussion of scenario assumptions (technical)**
+**Discussion of scenario assumptions (technical)** ***(click to unfold)***
 
 </summary>
 
@@ -288,7 +290,7 @@ Although not corresponding to reality, we have chosen to represent the "no actio
 
 <summary>
 
-**Context**
+**Context** ***(click to unfold)***
 
 </summary>
 
@@ -300,7 +302,7 @@ On April 29, 2020, during the first lockdown, [an article in the newspaper Les E
 
 <summary>
 
-**Comparison of scenarios to real data**
+**Comparison of scenarios to real data** ***(click to unfold)***
 
 </summary>
 
@@ -331,7 +333,7 @@ scenario %>%
 
 <summary>
 
-**Impact politique et médiatique**
+**Impact politique et médiatique** ***(click to unfold)***
 
 </summary>
 
@@ -347,7 +349,7 @@ The confidentiality of the report from which these curves were taken raises the 
 
 <summary>
 
-**Discussion of scenario assumptions (technical)**
+**Discussion of scenario assumptions (technical)** ***(click to unfold)***
 
 </summary>
 
@@ -383,7 +385,7 @@ On October 30, the Institut Pasteur produced an update of its scenarios to take 
 
 <summary>
 
-**Comparison of scenarios to real data**
+**Comparison of scenarios to real data** ***(click to unfold)***
 
 </summary>
 
@@ -441,7 +443,7 @@ scenario %>%
 
 <summary>
 
-**Political and media impact**
+**Political and media impact** ***(click to unfold)***
 
 </summary>
 
@@ -455,7 +457,7 @@ These models were also widely reported in the press: ["Second wave: worrying sce
 
 <summary>
 
-**Discussion of scenario assumptions (technical)**
+**Discussion of scenario assumptions (technical)** ***(click to unfold)***
 
 </summary>
 
@@ -469,7 +471,7 @@ As the report has not been made public, it has not been possible for us to explo
 
 <summary>
 
-**Context**
+**Context** ***(click to unfold)***
 
 </summary>
 
@@ -485,7 +487,7 @@ Before these dates, a number of measures unlikely to impact the national dynamic
 
 <summary>
 
-**Comparison of scenarios to real data: Inserm scenarios**
+**Comparison of scenarios to real data: Inserm scenarios** ***(click to unfold)***
 
 </summary>
 
@@ -569,7 +571,7 @@ scenario %>%
 
 <summary>
 
-**Comparison of scenarios to real data: Pasteur Institute scenarios**
+**Comparison of scenarios to real data: Pasteur Institute scenarios** ***(click to unfold)***
 
 </summary>
 
@@ -640,7 +642,7 @@ scenario %>%
 
 <summary>
 
-**Institut Pasteur's self-evaluation**
+**Institut Pasteur's self-evaluation** ***(click to unfold)***
 
 </summary>
 
@@ -664,7 +666,7 @@ However, we could not find such a projection in [the February 8 report](https://
 
 <summary>
 
-**Political and media impact**
+**Political and media impact** ***(click to unfold)***
 
 </summary>
 
@@ -688,7 +690,7 @@ These results were also presented in a [special report of the Scientific Council
 
 <summary>
 
-**Discussion of scenario assumptions (technical)**
+**Discussion of scenario assumptions (technical)** ***(click to unfold)***
 
 </summary>
 
@@ -722,7 +724,7 @@ The INSERM report of January 16 deserves clarification, because it says that the
 
 <summary>
 
-**Context**
+**Context** ***(click to unfold)***
 
 </summary>
 
@@ -736,7 +738,7 @@ For the May 21 report, we did not need to conduct an analysis ourselves. Indeed 
 
 <summary>
 
-**Comparison of scenarios to actual data**
+**Comparison of scenarios to actual data** ***(click to unfold)***
 
 </summary>
 
@@ -781,7 +783,7 @@ knitr::include_graphics("images/Pasteur_2021_Avril/Cauchemez.png")
 
 <summary>
 
-**Political and media impact**
+**Political and media impact** ***(click to unfold)***
 
 </summary>
 
@@ -805,7 +807,7 @@ The decrease occured the next week, and 50 days later (June 15) there were less 
 
 <summary>
 
-**Discussion of scenario assumptions (technical)**
+**Discussion of scenario assumptions (technical)** ***(click to unfold)***
 
 </summary>
 
@@ -837,7 +839,7 @@ In both cases we stop the comparison in mid-June, when the appearance of the del
 
 <summary>
 
-**Contexte**
+**Contexte** ***(click to unfold)***
 
 </summary>
 
@@ -853,7 +855,7 @@ To remedy this, the Institut Pasteur published two new reports, on [July 26](htt
 
 <summary>
 
-**Comparison of scenarios to actual data**.
+**Comparison of scenarios to actual data** ***(click to unfold)***
 
 </summary>
 
@@ -1007,7 +1009,7 @@ scenario %>%
 
 <summary>
 
-**Political and media impact**
+**Political and media impact** ***(click to unfold)***
 
 </summary>
 
@@ -1029,7 +1031,7 @@ Interestingly, the United Kingdom faced the same situation in July: an increase 
 
 <summary>
 
-**Discussion of scenario assumptions (technical)**
+**Discussion of scenario assumptions (technical)** ***(click to unfold)***
 
 </summary>
 
@@ -1069,7 +1071,7 @@ The second report only makes assumptions about the time spent in critical care (
 
 <summary>
 
-**Context**
+**Context** ***(click to unfold)***
 
 </summary>
 
@@ -1083,7 +1085,7 @@ We present a comparison between modeling scenarios and reality in the case of "F
 
 <summary>
 
-**Comparison of scenarios to actual data**
+**Comparison of scenarios to actual data** ***(click to unfold)***
 
 </summary>
 
@@ -1103,7 +1105,7 @@ The actual peak is below the most optimistic scenario, the median scenarios are 
 
 <summary>
 
-**Political and media impact**
+**Political and media impact** ***(click to unfold)***
 
 </summary>
 
@@ -1121,7 +1123,7 @@ The fact that the models greatly overestimated the impact of the reopening was [
 
 <summary>
 
-**Context**
+**Context** ***(click to unfold)***
 
 </summary>
 
@@ -1133,7 +1135,7 @@ In a context marked by the generalization of the sanitary pass, the Pasteur Inst
 
 <summary>
 
-**Comparison of scenarios to actual data**.
+**Comparison of scenarios to actual data** ***(click to unfold)***
 
 </summary>
 
@@ -1166,7 +1168,7 @@ scenario %>%
 
 <summary>
 
-**Political and media impact**
+**Political and media impact** ***(click to unfold)***
 
 </summary>
 
@@ -1178,7 +1180,7 @@ These models were [taken up](https://www.huffingtonpost.fr/entry/pass-sanitaire-
 
 <summary>
 
-**Discussion of scenario assumptions (technical)**
+**Discussion of scenario assumptions (technical)** ***(click to unfold)***
 
 </summary>
 
@@ -1209,7 +1211,7 @@ As said before, the "relaxation of social distancing" is an hypothesis impossibl
 
 <summary>
 
-**Contexte**
+**Contexte** ***(click to unfold)***
 
 </summary>
 
@@ -1227,7 +1229,7 @@ Here we compare the model projection 2 weeks before the peak of the second delta
 
 <summary>
 
-**Comparison of scenarios to actual data**.
+**Comparison of scenarios to actual data** ***(click to unfold)***
 
 </summary>
 
@@ -1327,7 +1329,7 @@ ggplot(data = scenario, aes(x = date)) +
 
 <summary>
 
-**Discussion of scenario assumptions (technical)**
+**Discussion of scenario assumptions (technical)** ***(click to unfold)***
 
 </summary>
 
@@ -1341,7 +1343,7 @@ There is no need to check the assumptions for these projections. The two-week ho
 
 <summary>
 
-**Context**
+**Context** ***(click to unfold)***
 
 </summary>
 
@@ -1357,7 +1359,7 @@ We also analyze a [report published on February 15](https://modelisation-covid19
 
 <summary>
 
-**Comparison of scenarios to actual data**
+**Comparison of scenarios to actual data** ***(click to unfold)***
 
 </summary>
 
@@ -1477,7 +1479,7 @@ scenario %>%
 
 <summary>
 
-**Political and media impact**
+**Political and media impact** ***(click to unfold)***
 
 </summary>
 
@@ -1494,7 +1496,7 @@ The Pasteur Institut's self-evaluation report was also quoted in [some press art
 
 <summary>
 
-**Institut Pasteur self-assessment and discussion of hypotheses**
+**Institut Pasteur self-assessment and discussion of hypotheses** ***(click to unfold)***
 
 </summary>
 
